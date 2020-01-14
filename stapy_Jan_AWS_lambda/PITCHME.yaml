@@ -1,0 +1,8 @@
+# fixed themeの設定
+theme : sky
+
+#スライドのページ数表示の設定
+slide-number : true
+
+#トランジションの設定
+transition : none
