@@ -14,13 +14,13 @@
 
 ### [PyCon JP 2020 staff WANTED!!](https://docs.google.com/forms/d/e/1FAIpQLSfkQtEEAAK8xDFR1dGCQPkU6m0ZxEas3z9l-VVCU_3_wQa6Yw/viewform)
 
-![上記のフォームのスクリーンショット](stapy_Jan_AWS_lambda/assets/css/images/1-pyconjp_staff_wanted.png)
+![上記のフォームのスクリーンショット](stapy_Jan_AWS_lambda/assets/images/1-pyconjp_staff_wanted.jpg)
 
 +++
 
 ### 1/26に[勉強会](https://rejectpy2019.connpass.com/event/159691/)をやります（13〜17時）
 
-![勉強会のconnpassページのスクリーンショット](stapy_Jan_AWS_lambda/assets/css/images/2-rejectcon_coming_soon.png)
+![勉強会のconnpassページのスクリーンショット](stapy_Jan_AWS_lambda/assets/images/2-rejectcon_coming_soon.png)
 
 ---
 
@@ -88,7 +88,7 @@ ref: https://gist.github.com/gene1wood/4a052f39490fae00e0c3#gistcomment-3131227
 
 ### 例：勉強会の参加状況を取得
 
-![connpass APIから定期的に参加状況を取得し、Slackに通知するスクリプトをLambdaで動かしています](stapy_Jan_AWS_lambda/assets/css/images/3-notify_to_slack_everyday.png)
+![connpass APIから定期的に参加状況を取得し、Slackに通知するスクリプトをLambdaで動かしています](stapy_Jan_AWS_lambda/assets/images/3-notify_to_slack_everyday.png)
 
 Note:
 
@@ -159,9 +159,9 @@ Lambdaの開発環境にEC2が挙がることがあるのは恐らくこのた�
 
 ### もう一つハマったシェル（bash）のアスタリスク展開
 
-- `zip -r bundle.zip *`：.で始まるファイル類を**除く**
+- `zip -r bundle.zip *`（＝.で始まるファイル類を**除く**）
 - 隠しディレクトリの中のファイルが含まれずにエラーとなった
-- →`zip -gr bundle.zip .[^.]*`：.で始まるファイル類を追加✨
+- →`zip -gr bundle.zip .[^.]*`✨（＝.で始まるファイル類を追加）
 
 ref: https://linuxfan.info/bash-path-expansion
 
@@ -178,10 +178,10 @@ ref: https://linuxfan.info/bash-path-expansion
 ### 今後試してみたい
 
 - `aws-cli`（時間切れです。ブラウザからのアップロードがなくせると見ています）
-- `sam build`してみる（ややオーバースペック？エンドポイントまでいらない）
+- [`sam build`](https://docs.aws.amazon.com/ja_jp/serverless-application-model/latest/developerguide/serverless-sam-cli-using-build.html)してみる（ややオーバースペック？エンドポイントまでいらない）
 
 +++
 
 ### ご清聴ありがとうございました
 
-Contact: [Twitter @ftnext](https://twitter.com/ftnext)／[匿名質問箱](https://peing.net/ja/ftnext)
+Contact: [@fa[twitter] @ftnext](https://twitter.com/ftnext)／[匿名質問箱](https://peing.net/ja/ftnext)
