@@ -6,21 +6,21 @@
 
 ### お前、誰よ (About nikkie)
 
-- ハンドルネーム「にっきー」 ([@ftnext](https://twitter.com/ftnext))
+- ハンドルネーム「にっきー」 (@fa[twitter] [@ftnext](https://twitter.com/ftnext))
 - みんなのPython勉強会 4代目LT王子 && スタッフ
-- 2020/03まで週1ブログで自然言語処理のアウトプット中
+- 2020/03まで週1[ブログ](https://nikkie-ftnext.hatenablog.com/)で自然言語処理のアウトプット中
 
 +++
 
 ### [PyCon JP 2020 staff WANTED!!](https://docs.google.com/forms/d/e/1FAIpQLSfkQtEEAAK8xDFR1dGCQPkU6m0ZxEas3z9l-VVCU_3_wQa6Yw/viewform)
 
-TODO：フォーム画像
+![上記のフォームのスクリーンショット](stapy_Jan_AWS_lambda/assets/css/images/1-pyconjp_staff_wanted.png)
 
 +++
 
-### 1/26に[勉強会](https://rejectpy2019.connpass.com/event/159691/)をやります
+### 1/26に[勉強会](https://rejectpy2019.connpass.com/event/159691/)をやります（13〜17時）
 
-TODO：画像
+![勉強会のconnpassページのスクリーンショット](stapy_Jan_AWS_lambda/assets/css/images/2-rejectcon_coming_soon.png)
 
 ---
 
@@ -37,7 +37,7 @@ TODO：画像
 
 ---
 
-### Lambda使ったことある方？
+### Lambda使ったことある方？🙋‍♂️
 
 ### Do you know Lambda?
 
@@ -66,13 +66,13 @@ ref: https://gist.github.com/gene1wood/4a052f39490fae00e0c3#gistcomment-3131227
 
 +++
 
-### Lambdaで`pip install`したパッケージ使ったことある方？
+### Lambdaで`pip install`したパッケージ使ったことある方？🙋‍♂️
 
 （ある方は温かい目で見守っていてください）
 
 ---
 
-### nikkie最近のマイブーム
+### nikkie最近のマイブーム✨
 
 ## Slackに投稿するPythonスクリプトをLambdaで定期実行
 
@@ -80,7 +80,7 @@ ref: https://gist.github.com/gene1wood/4a052f39490fae00e0c3#gistcomment-3131227
 
 ### LambdaからSlack投稿
 
-- LambdaにPythonスクリプトを配置
+- LambdaにPythonスクリプトを配置（`urllib`でSlackの投稿用URLを叩く）
 - [CloudWatch Event](https://docs.aws.amazon.com/AmazonCloudWatch/latest/events/WhatIsCloudWatchEvents.html)でスケジュール実行（毎日◯時）
 - （エンドポイントは作らない）
 
@@ -88,7 +88,7 @@ ref: https://gist.github.com/gene1wood/4a052f39490fae00e0c3#gistcomment-3131227
 
 ### 例：勉強会の参加状況を取得
 
-TODO：動作しているスクショ
+![connpass APIから定期的に参加状況を取得し、Slackに通知するスクリプトをLambdaで動かしています](stapy_Jan_AWS_lambda/assets/css/images/3-notify_to_slack_everyday.png)
 
 Note:
 
@@ -97,10 +97,11 @@ Note:
 
 +++
 
-### やりたいこと
+### 今回やりたいこと
 
-- Googleスプレッドシートから読み出す
-- 条件に該当する行の内容をSlack通知
+- Googleスプレッドシートをタスクリストとしている
+- シートの入力内容を取得する
+- 条件に該当する行の内容（タスク）をSlack通知
 
 +++
 
@@ -148,7 +149,7 @@ ref: [ドキュメント](https://docs.aws.amazon.com/ja_jp/lambda/latest/dg/lam
 - Lambdaの実行環境はAmazonLinux
 - nikkieの開発環境はmacOS
 - `pip install`して入るパッケージはmacOS向け。それをzipファイルにしていた
-- →Dockerを使ってAmazonLinux環境を用意
+- →Dockerを使ってAmazonLinux環境を用意✨
 
 Note:
 
@@ -160,27 +161,24 @@ Lambdaの開発環境にEC2が挙がることがあるのは恐らくこのた�
 
 - `zip -r bundle.zip *`：.で始まるファイル類を**除く**
 - 隠しディレクトリの中のファイルが含まれずにエラーとなった
-- →`zip -gr bundle.zip .[^.]*`：.で始まるファイル類を追加
+- →`zip -gr bundle.zip .[^.]*`：.で始まるファイル類を追加✨
 
 ref: https://linuxfan.info/bash-path-expansion
-
-+++
-
-TODO：aws-cliを試す（手動で上げるのと同じ？）
 
 ---
 
 ### LT：AWS Lambdaで`pip install`したパッケージを使うときにハマったこと
 
 - `pip install -t .`してzipファイルを作るといわれても
-- AmazonLinux環境で`pip install`しないと、プラットフォームによるパッケージ差異でLambdaで動かない
-- シェルのアスタリスクは.で始まるファイル類を除く
+- AmazonLinux環境で`pip install`しないと、**プラットフォームによるパッケージ差異**でLambdaで動かない
+- シェルのアスタリスクは.で始まるファイル類を**除く**
 
 +++
 
-### 今後
+### 今後試してみたい
 
-sam buildしてみる（TODO：あとで書く）
+- `aws-cli`（時間切れです。ブラウザからのアップロードがなくせると見ています）
+- `sam build`してみる（ややオーバースペック？エンドポイントまでいらない）
 
 +++
 
