@@ -1,0 +1,39 @@
+.reveal h1,
+.reveal h2,
+.reveal h3,
+.reveal h4,
+.reveal h5,
+.reveal h6 {
+  text-transform: none;
+  word-wrap: break-word;
+}
+
+.reveal section img {
+    border: 0;
+    box-shadow: none;
+}
+
+.thirty-percent-img img {
+  width: 30%;
+  height: 30%;
+}
+
+.fifty-percent-img img {
+  width: 50%;
+  height: 50%;
+}
+
+.sixty-percent-img img {
+  width: 60%;
+  height: 60%;
+}
+
+.seventy-percent-img img {
+  width: 70%;
+  height: 70%;
+}
+
+.eighty-percent-img img {
+  width: 80%;
+  height: 80%;
+}

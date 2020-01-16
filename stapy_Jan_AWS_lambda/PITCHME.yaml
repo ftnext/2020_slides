@@ -1,0 +1,10 @@
+# fixed themeの設定
+theme : sky
+# カスタムCSSファイル
+theme-override : stapy_Jan_AWS_lambda/assets/css/PITCEME.css
+
+#スライドのページ数表示の設定
+slide-number : true
+
+#トランジションの設定
+transition : none
