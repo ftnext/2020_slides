@@ -12,6 +12,14 @@
 2. 流儀その1：プロジェクトとアプリケーション
 3. 流儀その2：モデル・URL・ビュー・テンプレート
 
++++
+
+### なぜ話すか
+
+- Django Girls Tutorialでは「モデル」「URL」「ビュー」「テンプレート」など新しい概念が登場する
+- チュートリアルを1回やるだけで、これらを腹落ちするのは難しい
+- Djangoの要素を1つずつ説明することで、より深く理解するきっかけになれば
+
 ---
 
 ### 1の前に. Django Girlsとは
@@ -121,6 +129,8 @@ GET http://example.com/ HTTP/1.1
 
 ### Django URLのコード例
 
+@fa[github] [blog/urls.py (Tag: 1-url_and_view)](https://github.com/ftnext/explain-how-django-works-for-beginner/blob/8f1eaa0856cbfb499d05fdcdb2adb4fb997665ea/blog/urls.py)
+
 ```python
 urlpatterns = [
     # URLが 127.0.0.1:8000/ のときは、
@@ -157,6 +167,8 @@ urlpatterns = [
 +++
 
 ### Django ビューのコード例
+
+@fa[github] [blog/views.py (Tag: 1-url_and_view)](https://github.com/ftnext/explain-how-django-works-for-beginner/blob/8f1eaa0856cbfb499d05fdcdb2adb4fb997665ea/blog/views.py)
 
 ```python
 def post_list(request):
@@ -203,6 +215,8 @@ TODO：要定義確認
 
 ### Django テンプレートのコード例
 
+@fa[github] [blog/templates/blog/post_list.html (Tag: 2-url_view_template)](https://github.com/ftnext/explain-how-django-works-for-beginner/blob/1db8d0827afac7514725db489fc21efcf82bf25d/blog/templates/blog/post_list.html)
+
 ```html
 <div>
   <p>公開日: 2014/06/14, 12:14</p>
@@ -214,6 +228,8 @@ TODO：要定義確認
 +++
 
 ### ビューがテンプレートを返す コード例
+
+@fa[github] [blog/views.py (Tag: 2-url_view_template)](https://github.com/ftnext/explain-how-django-works-for-beginner/blob/1db8d0827afac7514725db489fc21efcf82bf25d/blog/views.py)
 
 ```python
 def post_list(request):
@@ -256,6 +272,8 @@ def post_list(request):
 
 ### ビューがモデルを使うコード例
 
+@fa[github] [blog/views.py (Tag: 3-url_view_model_template)](https://github.com/ftnext/explain-how-django-works-for-beginner/blob/3b0133546c8a8a565de5a0427f164b666b5378e0/blog/views.py)
+
 ```python
 def post_list(request):
     # ブログ投稿のうち、published_date（公開日）が現在より前のものを取得し。
@@ -268,6 +286,8 @@ def post_list(request):
 +++
 
 ### データをテンプレートに表示するコード例
+
+@fa[github] [blog/templates/blog/post_list.html (Tag: 3-url_view_model_template)](https://github.com/ftnext/explain-how-django-works-for-beginner/blob/3b0133546c8a8a565de5a0427f164b666b5378e0/blog/templates/blog/post_list.html)
 
 ```html
 <!-- データベースから取り出した投稿を1つずつ繰り返し処理する。 -->
