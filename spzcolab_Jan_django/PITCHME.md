@@ -60,13 +60,21 @@
 
 - Pythonを学ぶ：ドキュメントの[チュートリアル](https://docs.python.org/ja/3/tutorial/)、オンライン学習 [PyQ](https://pyq.jp/)
 - Djangoを学ぶ：akiyokoさんの[現場で使えるシリーズ](https://akiyoko.booth.pm/)（[学習ロードマップ](https://akiyoko.hatenablog.jp/entry/2018/12/01/133427)もオススメ）
-- Web開発について学ぶ：『[プロになるためのWeb技術入門](https://gihyo.jp/book/2010/978-4-7741-4235-7)』
+- Web開発について学ぶ：『[プロになるためのWeb技術入門](https://gihyo.jp/book/2010/978-4-7741-4235-7)』、「[開発者向けのWeb技術 | MDN web docs](https://developer.mozilla.org/ja/docs/Web)」
 
 +++
 
-### 参考書籍
+### Djangoのチュートリアル
+
+- [Python Django入門 | Qiita](https://qiita.com/kaki_k/items/511611cadac1d0c69c54) (1)〜(7)
+- [Django 公式ドキュメントのチュートリアル](https://docs.djangoproject.com/ja/3.0/intro/ tutorial01/) その1〜その7
+
++++
+
+### 参考文献
 
 - 『[プロになるためのWeb技術入門](https://gihyo.jp/book/2010/978-4-7741-4235-7)』
+- 「[開発者向けのWeb技術 | MDN web docs](https://developer.mozilla.org/ja/docs/Web)」
 
 +++
 
