@@ -203,10 +203,8 @@ def post_list(request):
 
 ### HTML
 
-TODO：要定義確認
-
-- Web上の情報を記述するフォーマット
-- タグを使って意味づけする
+- タグを使って構造を指定する
+- 例：見出し、段落、箇条書き、画像、表（詳しくは[HTMLの基本 | MDN web docs](https://developer.mozilla.org/ja/docs/Learn/Getting_started_with_the_web/HTML_basics)）
 - ブラウザはHTMLを解析して描画している（レスポンスはあくまで文字列）
 
 +++
