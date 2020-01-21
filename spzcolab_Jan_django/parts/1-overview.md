@@ -55,10 +55,13 @@
 
 ### HTTPでの通信の登場人物
 
-TODO：表にしたい
+![クライアント（＝Webブラウザ。ChromeやFirefox）とサーバ（＝Djangoで作ったWebアプリ）が通信する](spzcolab_Jan_django/assets/images/1/4-client_server.png)
 
-- クライアント・リクエスト・ブラウザ
-- サーバ・レスポンス・Webアプリ
++++
+
+### HTTP通信（ざっくり）
+
+![クライアントはリクエストを送信。サーバはリクエストに応じた処理をしてレスポンスを返却。クライアントはレスポンスを解釈して表示](spzcolab_Jan_django/assets/images/1/5-request_response.png)
 
 +++
 
