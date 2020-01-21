@@ -55,6 +55,16 @@
 
 +++
 
+### 参考：python.orgからPython(3.8.1)のインストール
+
+- Windowsの方向け：https://www.python.org/downloads/windows/
+    - PCが64ビットの場合：「Windows x86-64 executable installer」
+    - PCが32ビットの場合：「Windows x86 executable installer」
+- macOSの方向け：https://www.python.org/downloads/mac-osx/
+- 上記以外のOSの方はご相談ください
+
++++
+
 ## つまづいたときは手を挙げて質問をどうぞ！
 
 ## 🙋‍♀️ 🙋‍♂️
