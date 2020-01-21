@@ -10,13 +10,13 @@
 
 1. Django Girls Tutorialとは
 2. 流儀その1：プロジェクトとアプリケーション
-3. 流儀その2：モデル・URL・ビュー・テンプレート
+3. 流儀その2：モデル・URL設定・ビュー・テンプレート
 
 +++
 
 ### なぜ話すか
 
-- Django Girls Tutorialでは「モデル」「URL」「ビュー」「テンプレート」など新しい概念が登場する
+- Django Girls Tutorialでは「モデル」「URL設定」「ビュー」「テンプレート」など新しい概念が登場する
 - チュートリアルを1回やるだけで、これらを腹落ちするのは難しい
 - Djangoの要素を1つずつ説明することで、より深く理解するきっかけになれば
 
@@ -64,7 +64,7 @@ ref: https://djangogirls.org/tokyo/
 
 ---
 
-### 3. 流儀その2：モデル・URL・ビュー・テンプレート
+### 3. 流儀その2：モデル・URL設定・ビュー・テンプレート
 
 ![新しいことを4つも覚えないといけません。。](spzcolab_Jan_django/assets/images/2/2-django_many_unknown.png)
 
@@ -72,13 +72,13 @@ ref: https://djangogirls.org/tokyo/
 
 ### 以下の順番で紹介していきます
 
-1. URLとビュー
-2. URL、ビュー、テンプレート
-3. URL、ビュー、テンプレート、モデル
+1. URL設定とビュー
+2. URL設定、ビュー、テンプレート
+3. URL設定、ビュー、テンプレート、モデル
 
 ---
 
-### 3-1. URLとビュー
+### 3-1. URL設定とビュー
 
 - 最小限のWebアプリを作れる
 - 最小限＝HTTPに則ってリクエストにレスポンスを返す
@@ -109,7 +109,7 @@ GET http://example.com/ HTTP/1.1
 
 +++
 
-### DjangoのURL
+### DjangoのURL設定
 
 - HTTPリクエストのURIを見る
 - URIの一部（パス）と一致する**ビューを呼び出す**
@@ -127,16 +127,18 @@ GET http://example.com/ HTTP/1.1
 
 +++
 
-### Django URLのコード例
+### URL設定のコード例
 
 @fa[github] [blog/urls.py (Tag: 1-url_and_view)](https://github.com/ftnext/explain-how-django-works-for-beginner/blob/8f1eaa0856cbfb499d05fdcdb2adb4fb997665ea/blog/urls.py)
 
 ```python
 urlpatterns = [
-    # URLが 127.0.0.1:8000/ のときは、
+    # リクエスト中のURIが 127.0.0.1:8000/ のときは、
+    # パスが''（空文字）となる。
     # blog/views.py の post_list 関数を呼び出す
     path('', views.post_list, name='post_list'),
-    # URLが 127.0.0.1:8000/ 以外の場合は設定していないのでエラー
+    # リクエスト中のURIが 127.0.0.1:8000/ 以外の場合は
+    # 設定していないのでエラー
 ]
 ```
 
@@ -182,7 +184,7 @@ def post_list(request):
 
 ---
 
-### 3-2. URL、ビュー、テンプレート
+### 3-2. URL設定、ビュー、テンプレート
 
 - レスポンスとしてHTMLを返すWebアプリになる
 - レスポンスのメッセージボディにHTMLを文字列として含める
@@ -240,7 +242,7 @@ def post_list(request):
 
 ---
 
-### 3-3. URL、ビュー、テンプレート、モデル
+### 3-3. URL設定、ビュー、テンプレート、モデル
 
 - ここまでは決まったHTMLをレスポンスとして返せる（商品100個分テンプレートは作りたくない）
 - データを保存したり参照したりしたい
@@ -262,10 +264,10 @@ def post_list(request):
 
 +++
 
-### URL、ビュー、テンプレート、モデルの連携
+### URL設定、ビュー、テンプレート、モデルの連携
 
 <span class="eighty-percent-img">
-![URLに対応するビューが呼び出され、必要なモデルにアクセス、取得した結果をテンプレートに埋め込み、HTMLを生成して返す](spzcolab_Jan_django/assets/images/2/6-django_structure.png)
+![URL設定に対応するビューが呼び出され、必要なモデルにアクセス、取得した結果をテンプレートに埋め込み、HTMLを生成して返す](spzcolab_Jan_django/assets/images/2/6-django_structure.png)
 </span>
 
 +++
