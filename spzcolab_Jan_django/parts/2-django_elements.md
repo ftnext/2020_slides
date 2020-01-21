@@ -66,6 +66,10 @@ ref: https://djangogirls.org/tokyo/
 
 ### 3. 流儀その2：モデル・URL設定・ビュー・テンプレート
 
+![](spzcolab_Jan_django/assets/images/2/1-django_4elements.png)
+
++++
+
 ![新しいことを4つも覚えないといけません。。](spzcolab_Jan_django/assets/images/2/2-django_many_unknown.png)
 
 +++
@@ -182,6 +186,12 @@ def post_list(request):
     # 以下略
 ```
 
++++
+
+### URL設定とビューのイメージ
+
+![URL設定に該当するビューを呼び出し、ビューはリクエストを元にレスポンスを返す](spzcolab_Jan_django/assets/images/2/7-urlconf_view.png)
+
 ---
 
 ### 3-2. URL設定、ビュー、テンプレート
@@ -212,6 +222,12 @@ TODO：要定義確認
 - Webアプリの見た目に関わる
 - テンプレート≒HTML（テンプレートにはDjango独自のタグがある）
 - 仲間：CSS（見た目の指定）、JavaScript（動きをつける）
+
++++
+
+### URL設定、ビュー、テンプレートのイメージ
+
+![URL設定→ビューはこれまで通り。ビューはテンプレートを使ってHTMLを含んだレスポンスを作り、それを返す](spzcolab_Jan_django/assets/images/2/8-urlconf_view_template.png)
 
 +++
 
@@ -267,7 +283,7 @@ def post_list(request):
 ### URL設定、ビュー、テンプレート、モデルの連携
 
 <span class="eighty-percent-img">
-![URL設定に対応するビューが呼び出され、必要なモデルにアクセス、取得した結果をテンプレートに埋め込み、HTMLを生成して返す](spzcolab_Jan_django/assets/images/2/6-django_structure.png)
+![URL設定に対応するビューが呼び出され、必要なモデルにアクセス、取得した結果をテンプレートに埋め込み、HTMLを生成して返す](spzcolab_Jan_django/assets/images/2/9-urlconf_view_model_template.png)
 </span>
 
 +++
@@ -292,8 +308,8 @@ def post_list(request):
 @fa[github] [blog/templates/blog/post_list.html (Tag: 3-url_view_model_template)](https://github.com/ftnext/explain-how-django-works-for-beginner/blob/3b0133546c8a8a565de5a0427f164b666b5378e0/blog/templates/blog/post_list.html)
 
 ```html
-<!-- データベースから取り出した投稿を1つずつ繰り返し処理する。 -->
-<!-- 投稿の公開日やタイトル、本文を入れたHTMLを作る -->
+{# データベースから取り出した投稿を1つずつ繰り返し処理する。 #}
+{# 投稿の公開日やタイトル、本文を入れたHTMLを作る（ここまでコメント） #}
 {% for post in posts %}
   <div class="post">
     <div class="date">
