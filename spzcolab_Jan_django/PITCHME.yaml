@@ -1,0 +1,10 @@
+# fixed themeの設定
+theme : beige
+# カスタムCSSファイル
+theme-override : spzcolab_Jan_django/assets/css/PITCHME.css
+
+#スライドのページ数表示の設定
+slide-number : true
+
+#トランジションの設定
+transition : none
