@@ -26,11 +26,7 @@
 
 - 女性がプログラミングに出会う機会を提供するワークショップ
 - Tech業界における女性の割合が少ないという問題意識から発足
-- 2014年にベルリンから始まり、世界各地で開催
-
-Note:
-
-ref: https://djangogirls.org/tokyo/
+- 2014年にベルリンから始まり、世界各地で開催（[Tokyo](https://djangogirls.org/tokyo/)）
 
 +++
 
@@ -51,20 +47,22 @@ ref: https://djangogirls.org/tokyo/
 
 ### 2. 流儀その1：プロジェクトとアプリケーション
 
+Djangoの用語としての意味です
+
 - プロジェクト＝Webアプリ全体
 - アプリケーション＝Webアプリの機能1つ1つ
 
 +++
 
-### プロジェクトとアプリケーションの関係（[ドキュメント](https://docs.djangoproject.com/ja/3.0/intro/tutorial01/#creating-the-polls-app)）
+### プロジェクトとアプリケーションの関係（[参考：ドキュメント](https://docs.djangoproject.com/ja/3.0/intro/tutorial01/#creating-the-polls-app)）
 
 - プロジェクトは**1つだけ**
-- Webサイトの設定と**1つ以上**のアプリケーションを持つ
+- Webアプリの設定と**1つ以上**のアプリケーションを持つ
 - 例：ブログ記事を管理するための機能（アプリケーション）、ユーザ管理をするための機能（アプリケーション）
 
 ---
 
-### 3. 流儀その2：モデル・URL設定・ビュー・テンプレート
+### 3. 流儀その2：アプリケーションの4要素
 
 <span class="eighty-percent-img">
 ![](spzcolab_Jan_django/assets/images/2/1-django_4elements.png)
@@ -76,7 +74,7 @@ ref: https://djangogirls.org/tokyo/
 
 +++
 
-### 以下の順番で紹介していきます
+### アプリケーションの要素について、以下の順番で紹介していきます
 
 1. URL設定とビュー
 2. URL設定、ビュー、テンプレート
@@ -88,6 +86,21 @@ ref: https://djangogirls.org/tokyo/
 
 - 最小限のWebアプリを作れる
 - 最小限＝HTTPに則ってリクエストにレスポンスを返す
+
++++
+
+### URL設定とビューのイメージ
+
+<span class="eighty-percent-img">
+![URL設定に該当するビューを呼び出し、ビューはリクエストを元にレスポンスを返す](spzcolab_Jan_django/assets/images/2/7-urlconf_view.png)
+</span>
+
++++
+
+### ポイント
+
+- **URL設定は、HTTPリクエストに関係**
+- ビューは、HTTPレスポンスに関係
 
 +++
 
@@ -108,18 +121,21 @@ ref: https://djangogirls.org/tokyo/
 
 ### HTTPリクエストの一部
 
+```
 GET http://example.com/ HTTP/1.1
+(以下略)
+```
 
 - HTTPメソッド：GET
 - URI：http://example.com/
 
 +++
 
-### DjangoのURL設定
+### DjangoのURL設定（URLconf）
 
+- 前提：HTTPリクエストをDjango流のオブジェクトに変換している
 - HTTPリクエストのURIを見る
-- URIの一部（パス）と一致する**ビューを呼び出す**
-- HTTPリクエストをDjango流のオブジェクトに変換して後続の処理にまわす
+- URIの一部（パス）と一致する**ビューを呼び出す**（HTTPリクエストを渡す）
 
 +++
 
@@ -129,7 +145,7 @@ GET http://example.com/ HTTP/1.1
 
 - `http`：プロトコル
 - `www.example.com`：ホスト（インターネット上のコンピュータ）
-- `index`：パス（サーバ上のどこにアクセスするかの指定）
+- `index`：パス（ホスト上のどこにアクセスするかの指定）
 
 +++
 
@@ -147,6 +163,13 @@ urlpatterns = [
     # 設定していないのでエラー
 ]
 ```
+
++++
+
+### 再掲：ポイント
+
+- URL設定は、HTTPリクエストに関係
+- **ビューは、HTTPレスポンスに関係**
 
 +++
 
@@ -192,7 +215,7 @@ def post_list(request):
 
 +++
 
-### URL設定とビューのイメージ
+### 再掲：URL設定とビューのイメージ
 
 <span class="eighty-percent-img">
 ![URL設定に該当するビューを呼び出し、ビューはリクエストを元にレスポンスを返す](spzcolab_Jan_django/assets/images/2/7-urlconf_view.png)
@@ -202,7 +225,7 @@ def post_list(request):
 
 ### 3-2. URL設定、ビュー、テンプレート
 
-- レスポンスとしてHTMLを返すWebアプリになる
+- レスポンスとして**HTML**を返すWebアプリになる（CoLabのようなWebアプリに近づく）
 - レスポンスのメッセージボディにHTMLを文字列として含める
 
 +++
@@ -262,15 +285,16 @@ def post_list(request):
     # 指定したテンプレート（HTML）をメッセージ本文に入れた
     # HTTPレスポンス（HttpResponse）を、render関数で作って返す
     return render(request, 'blog/post_list.html', {})
+    # URL設定に対してテンプレートが対応する形になる
 ```
 
 ---
 
 ### 3-3. URL設定、ビュー、テンプレート、モデル
 
-- ここまでは決まったHTMLをレスポンスとして返せる（商品100個分テンプレートは作りたくない）
-- データを保存したり参照したりしたい
+- 決まったHTMLをレスポンスとして返せる（しかし、勉強会1000回分は作りたくない。。）
 - データをWebアプリとは別で管理する（データベース）
+- リクエストに応じてデータを取り出したり保存したりする
 
 +++
 
