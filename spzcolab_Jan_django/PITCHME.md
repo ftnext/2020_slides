@@ -23,7 +23,8 @@
 ### お前、誰よ（自己紹介）
 
 - ハンドルネーム「にっきー」 (@fa[twitter] [@ftnext](https://twitter.com/ftnext))
-- エンジニア経験 4年、Python経験 2年ほど
+- エンジニア4年目、Python経験 2年ほど
+- 1月〜3月 週1[ブログ](https://nikkie-ftnext.hatenablog.com/)で自然言語処理ネタ
 - Django Girls Tutorialの翻訳に参加したり、ワークショップで教えたり
 - アニメ大好き 🥭🍑🍊🍐🧺 🏐 🎺🎷
 
