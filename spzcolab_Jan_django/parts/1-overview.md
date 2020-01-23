@@ -55,13 +55,17 @@
 
 ### HTTPでの通信の登場人物
 
+<span class="eighty-percent-img">
 ![クライアント（＝Webブラウザ。ChromeやFirefox）とサーバ（＝Djangoで作ったWebアプリ）が通信する](spzcolab_Jan_django/assets/images/1/4-client_server.png)
+</span>
 
 +++
 
 ### HTTP通信（ざっくり）
 
+<span class="eighty-percent-img">
 ![クライアントはリクエストを送信。サーバはリクエストに応じた処理をしてレスポンスを返却。クライアントはレスポンスを解釈して表示](spzcolab_Jan_django/assets/images/1/5-request_response.png)
+</span>
 
 +++
 

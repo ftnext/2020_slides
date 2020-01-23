@@ -66,7 +66,9 @@ ref: https://djangogirls.org/tokyo/
 
 ### 3. 流儀その2：モデル・URL設定・ビュー・テンプレート
 
+<span class="eighty-percent-img">
 ![](spzcolab_Jan_django/assets/images/2/1-django_4elements.png)
+</span>
 
 +++
 
@@ -159,7 +161,9 @@ urlpatterns = [
 
 ### 開発者ツールで覗く
 
+<span class="sixty-percent-img">
 ![この後紹介する単純なレスポンスを覗いた例](spzcolab_Jan_django/assets/images/2/4-http_response.png)
+</span>
 
 +++
 
@@ -190,7 +194,9 @@ def post_list(request):
 
 ### URL設定とビューのイメージ
 
+<span class="eighty-percent-img">
 ![URL設定に該当するビューを呼び出し、ビューはリクエストを元にレスポンスを返す](spzcolab_Jan_django/assets/images/2/7-urlconf_view.png)
+</span>
 
 ---
 
@@ -211,7 +217,9 @@ def post_list(request):
 
 ### レスポンスとして返されたHTMLを覗く
 
+<span class="seventy-percent-img">
 ![この後紹介するHTMLを含むレスポンスを覗いた例](spzcolab_Jan_django/assets/images/2/5-html_response.png)
+</span>
 
 +++
 
@@ -225,7 +233,9 @@ def post_list(request):
 
 ### URL設定、ビュー、テンプレートのイメージ
 
+<span class="seventy-percent-img">
 ![URL設定→ビューはこれまで通り。ビューはテンプレートを使ってHTMLを含んだレスポンスを作り、それを返す](spzcolab_Jan_django/assets/images/2/8-urlconf_view_template.png)
+</span>
 
 +++
 
@@ -280,7 +290,7 @@ def post_list(request):
 
 ### URL設定、ビュー、テンプレート、モデルの連携
 
-<span class="eighty-percent-img">
+<span class="seventy-percent-img">
 ![URL設定に対応するビューが呼び出され、必要なモデルにアクセス、取得した結果をテンプレートに埋め込み、HTMLを生成して返す](spzcolab_Jan_django/assets/images/2/9-urlconf_view_model_template.png)
 </span>
 
