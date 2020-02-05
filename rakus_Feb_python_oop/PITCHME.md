@@ -17,7 +17,7 @@
 
 - 2/16(☀️)開催[OOC](https://ooc.dev/)の[リジェクトコン](https://oorc.connpass.com/event/159856/)（2/24(祝・🌕)開催）
 - 「[変更しやすいコードを目指して、構造化プログラミングのコードをオブジェクト指向で書き直す（Python編）](https://fortee.jp/object-oriented-conference-2020/proposal/5d4120ad-287a-4cb9-8c30-06cb979f1feb)」で登壇します
-- LT駆動登壇準備（「オブジェクト指向はじめました」的LT）
+- LT駆動登壇準備（「オブジェクト指向はじめました🔰」的LT）
 
 +++
 
