@@ -57,13 +57,17 @@ ref: [退Py中のソースコード](https://automatetheboringstuff.com/chapter1
 
 +++
 
-### 処理内容：ファイル編
+### ファイルが指定された場合の処理
+
+`python shrink.py path/to/target.jpg`
 
 画像を縮小する関数を呼び出す（だけ）
 
 +++
 
-### 処理内容：ディレクトリ編
+### ディレクトリが指定された場合の処理
+
+`python shrink.py path/to/target_dir`
 
 1. 指定されたディレクトリと同名のディレクトリ（保存先）をカレントディレクトリに作る
 2. 指定されたディレクトリの中の各ファイルについて画像を縮小する関数を呼び出す
