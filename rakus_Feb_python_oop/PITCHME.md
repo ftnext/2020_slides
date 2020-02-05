@@ -158,30 +158,16 @@ Note:
 
 +++
 
-### オブジェクト指向で書く 1/2
-
-- (縮小対象, 保存先)というパスのペアをオブジェクト化（☆）
-- （☆）のオブジェクトにファイルパスの組を挙げてもらう
-	- 例：src/awesome.pngを縮小してdest/resized.pngとする
-
-+++
-
-### オブジェクト指向で書く 2/2
-
-- 縮小処理をインスタンス化
-- 縮小処理オブジェクトにファイルパスの組を渡す
-    - 複数の組を渡せる
-
-+++
-
-### コードではこんな感じ
+### オブジェクト指向で書いてみたコード
 
 ```python
     args = p.parse_args()
     destination = Path.cwd()
-    path_pair = ph.create_path_pair(args.source, destination)  # 1
-    targets = path_pair.list_targets()  # 2.列挙
-    processor = r.create_shrink_processor(shrink_size)
+    # 1. (縮小対象, 保存先)というパスの組のオブジェクト
+    path_pair = ph.create_path_pair(args.source, destination)
+    # 2. ファイルパスの組を列挙する
+    targets = path_pair.list_targets()
+    processor = r.create_shrink_processor(shrink_size)  # 3.縮小処理のインスタンス
     processor.process(targets)  # 3.縮小処理適用
 ```
 
