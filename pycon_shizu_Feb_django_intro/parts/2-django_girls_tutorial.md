@@ -1,198 +1,281 @@
 ### Djangoで始めるWeb開発の世界
 
-1. 前提：Webアプリ、フレームワーク、Djangoについて（5分）
-2. Django Girls Tutorialで学ぶDjangoの使い方（12分）
-3. Django Girls Tutorialから飛び出そう（10分）
-
-+++
-
-### Django Girls Tutorialで学ぶDjangoの使い方
-
-1. Django Girls Tutorialとは
-2. 流儀その1：プロジェクトとアプリケーション
-3. 流儀その2：モデル・URL設定・ビュー・テンプレート
+1. Webアプリについて知ろう
+2. **Django Girls TutorialでDjangoを学ぼう**
+3. Django Girls Tutorialの外の世界へ
 
 +++
 
 ### [Django Girls Tutorial](https://tutorial.djangogirls.org/ja/)とは
 
-- 始めてプログラミングに挑戦するワークショップの教材
+- プログラミングに初めて挑戦する人向けのワークショップの教材
 - Djangoでブログアプリを作る
 - Webに公開されており、誰でも利用可能
 
 +++
 
-### Django Girls Tutorialの特徴
+### Part2: Django Girls TutorialでDjangoを学ぼう
 
-- 初めてプログラミングに挑戦する方向け、平易な語り口
-- 知っているところは飛ばして取り組むのをオススメします
+1. 作るファイルのまとまりについて：プロジェクトとアプリケーション
+2. アプリケーションに含まれるファイルについて
+    - URL設定、ビュー
+    - テンプレート、モデル
 
 ---
 
-### 2. 流儀その1：プロジェクトとアプリケーション
+### Part2: Django Girls TutorialでDjangoを学ぼう
 
-Djangoの用語としての意味です
+1. **作るファイルのまとまりについて**：プロジェクトとアプリケーション
+2. アプリケーションに含まれるファイルについて
+    - URL設定、ビュー
+    - テンプレート、モデル
+
++++
+
+### ファイル配置に関するDjangoの流儀
+
+- Djangoではファイルを配置するルールが決まっている
+- イメージ「これこれのファイルを配置してください」
+- ➡️コマンドを使って必要なファイルを作ることができる
+
++++
+
+### Djangoで扱うファイルのまとまり
+
+以下の2種類
+
+- プロジェクト
+- アプリケーション
+
++++
+
+### Djangoで扱うファイルのまとまり
+
+Djangoの用語としての意味📗
 
 - プロジェクト＝Webアプリ全体
 - アプリケーション＝Webアプリの機能1つ1つ
 
-どちらもファイルのまとまりを指します
++++
+
+### プロジェクトとアプリケーション
+
+- プロジェクトは、Webアプリの設定を持つ。最初に作り、**1つだけ**
+- アプリケーションはWebアプリの機能ごとに作る
+- プロジェクトの中にアプリケーションが追加されていく
 
 +++
 
-### Djangoを使った開発
-
-- Djangoではどのようにコードを書くかが決まっている
-- Djangoを使った開発では、コマンドを使って必要なファイルを作ることができる
-
-+++
-
-### プロジェクトを作る
+### mysiteという名前のプロジェクトを作る
 
 `django-admin startproject mysite .`
 
-TODO：ディレクトリツリー
+```
+.
+├── manage.py
+└── mysite
+    ├── __init__.py
+    ├── asgi.py
+    ├── settings.py
+    ├── urls.py
+    └── wsgi.py
+```
 
 +++
 
-### アプリケーションを作る
+### blogという名前のアプリケーションを作る
 
 `python manage.py startapp blog`
 
-TODO：ディレクトリツリー
+```
+.
+├── blog
+│   ├── __init__.py
+│   ├── admin.py
+│   ├── apps.py
+│   ├── migrations
+│   │   └── __init__.py
+│   ├── models.py
+│   ├── tests.py
+│   └── views.py
+# プロジェクトは省略
+```
 
 +++
 
 ### プロジェクトとアプリケーションの関係（[参考：ドキュメント](https://docs.djangoproject.com/ja/3.0/intro/tutorial01/#creating-the-polls-app)）
 
-- プロジェクトは**1つだけ**
-- Webアプリの設定と**1つ以上**のアプリケーションを持つ
-- 例：ブログ記事を管理するための機能（アプリケーション）、ユーザ管理をするための機能（アプリケーション）
+- プロジェクトは**1つ**。その中に**1つ以上のアプリケーション**を持つ
+- ブログアプリの場合、2つのアプリケーション
+  - ブログ記事を管理するための機能（アプリケーション）
+  - ユーザ管理をするための機能（アプリケーション）
 
 ---
 
-### 3. 流儀その2：アプリケーションの4要素
+### Part2: Django Girls TutorialでDjangoを学ぼう
+
+1. 作るファイルのまとまりについて：プロジェクトとアプリケーション
+2. **アプリケーションに含まれるファイルについて**
+    - **URL設定、ビュー**
+    - テンプレート、モデル
+
++++
+
+### アプリケーションに含まれるファイル
+
+```
+.
+├── blog
+│   │ # URL設定とテンプレートのファイルは作成します
+│   ├── __init__.py
+│   ├── admin.py
+│   ├── apps.py
+│   ├── migrations
+│   │   └── __init__.py
+│   ├── models.py  # モデル
+│   ├── tests.py
+│   └── views.py  # ビュー
+```
+
++++
+
+### URL設定とビュー
+
+- この2つがあれば、Djangoのアプリケーションは動作する
+- ＝最小限のWebアプリが作れる
+- 何をするものか説明する上で、まずWebの構成要素を簡単に紹介
+
+---
+
+### Webの構成要素
+
+- リクエスト
+- レスポンス
+
+📌構成要素はWebアプリ全般に当てはまります
+
++++
+
+### リクエスト
+
+- WebブラウザにURLを入力（Firefoxでは、"Googleで検索、またはURLを入力します"）
+  - 例：https://nikkie-pycon-shizu-django-blog.herokuapp.com/post/1/
+- URLの一部からWebアプリを動かすコンピュータ（サーバ）を特定
+- **リクエスト**としてURLやブラウザに入力したデータをサーバに送信
+
++++
+
+### レスポンス
+
+- サーバで動くWebアプリはリクエストに応じた処理をする
+- Webアプリは処理結果を**レスポンス**として、Webブラウザに返す
+- Webブラウザはレスポンスに含まれるHTMLを解釈して表示
+
++++
+
+### リクエストとレスポンス
 
 <span class="eighty-percent-img">
-![](spzcolab_Jan_django/assets/images/2/1-django_4elements.png)
+![Webブラウザはリクエストを送信。サーバはリクエストに応じた処理をしてレスポンスを返却。Webブラウザはレスポンスを解釈して表示](pycon_shizu_Feb_django_intro/assets/images/2/1-browser_server_request_response.png)
 </span>
 
 +++
 
-![新しいことを4つも覚えないといけません。。](spzcolab_Jan_django/assets/images/2/2-django_many_unknown.png)
+### リクエストとレスポンスを覗く
+
+- Webブラウザの**開発者ツール**で見られます
+- [Chrome DevTools](https://developers.google.com/web/tools/chrome-devtools?hl=ja)
+- [Firefox 開発ツール](https://developer.mozilla.org/ja/docs/Tools)
 
 +++
 
-### アプリケーションの要素について、以下の順番で紹介していきます
+### 開発者ツールで見たリクエスト🔍
 
-1. URL設定
-2. ビュー
-3. テンプレート
-4. モデル
+![デモアプリの記事1つのURLをWebブラウザに入力したときのリクエスト](pycon_shizu_Feb_django_intro/assets/images/2/2-demo_app_request.png)
+
++++
+
+### 開発者ツールで見たレスポンス🔍
+
+![デモアプリの記事1つのURLのリクエストに対応するレスポンス](pycon_shizu_Feb_django_intro/assets/images/2/3-demo_app_response.png)
 
 ---
 
-### 3-1. URL設定（URLconf）
+### 🔙Djangoの話に戻ります🔙
 
-- urls.pyというファイルで設定する
-- URL設定は、HTTPリクエストのURIに関係
-
-+++
-
-### 開発者ツールで覗く
-
-![http://example.com/ にアクセスした時のリクエスト](spzcolab_Jan_django/assets/images/2/3-examplecom_request.png)
+1. 作るファイルのまとまりについて：プロジェクトとアプリケーション
+2. **アプリケーションに含まれるファイルについて**
+    - **URL設定**、ビュー
+    - テンプレート、モデル
 
 +++
 
-### HTTPリクエストの一部
+### URL設定
 
-```
-GET http://example.com/ HTTP/1.1
-(以下略)
-```
-
-- URI：http://example.com/
+- URLconfとも呼ばれます（URL configurationの略）
+- アプリケーションの中に作る`urls.py`というファイルのこと
 
 +++
 
-### DjangoのURL設定（URLconf）
+### URL設定とは
 
-- 前提：HTTPリクエストをDjango流のオブジェクトに変換している
-- HTTPリクエストのURIを見る
-- URIの一部（パス）と一致する**ビューを呼び出す**（HTTPリクエストを渡す）
-
-+++
-
-### 補足：URIのパスとは
-
-例：http://www.example.com/index
-
-- `http`：プロトコル
-- `www.example.com`：ホスト（インターネット上のコンピュータ）
-- `index`：パス（ホスト上のどこにアクセスするかの指定）
+- Webブラウザに入力するURLに関係（URLはリクエストにも含まれる）
+- Djangoを使った開発の中で、URLとビューを対応づけている
 
 +++
 
-### URL設定のコード例
+### URL設定の動き
 
-@fa[github] [blog/urls.py (Tag: 1-url_and_view)](https://github.com/ftnext/explain-how-django-works-for-beginner/blob/8f1eaa0856cbfb499d05fdcdb2adb4fb997665ea/blog/urls.py)
+1. リクエストに含まれるURLのパスの部分を見る
+    - https://nikkie-pycon-shizu-django-blog.herokuapp.com/post/1/ であれば、パスは `post/1/`（Appendix 2-1）
+2. パスに対応するビューを呼び出す
+
++++
+
+### URL設定のコード
 
 ```python
 urlpatterns = [
-    # リクエスト中のURIが 127.0.0.1:8000/ のときは、
-    # パスが''（空文字）となる。
-    # blog/views.py の post_list 関数を呼び出す
+    # パスが''であれば、ビューの中のpost_listを呼び出すという設定
     path('', views.post_list, name='post_list'),
-    # リクエスト中のURIが 127.0.0.1:8000/ 以外の場合は
-    # 設定していないのでエラー
+    # パスが'post/1/'や'post/108/'であれば、ビューの中のpost_detailを呼び出すという設定
+    path('post/<int:pk>/', views.post_detail, name='post_detail'),
+    # ...
 ]
 ```
 
 +++
 
-### 3-2. ビュー
+### URL設定のイメージ
 
-- URL設定から呼び出される
-- HTTPリクエストの情報を使った処理（例：HTTPメソッド）
-- HTTPに則ってリクエストにレスポンスを返す（＝最小限のWebアプリ）
-
-+++
-
-### 再掲：HTTPリクエストの一部
-
-```
-GET http://example.com/ HTTP/1.1
-(以下略)
-```
-
-- HTTPメソッド：GET
-
-+++
-
-### HTTPレスポンス
-
-2つのポイント
-
-- ステータスコード
-- メッセージボディ
-
-+++
-
-### 開発者ツールで覗く
-
-<span class="sixty-percent-img">
-![この後紹介する単純なレスポンスを覗いた例](spzcolab_Jan_django/assets/images/2/4-http_response.png)
+<span class="eighty-percent-img">
+![URL設定に該当するビューを呼び出す](pycon_shizu_Feb_django_intro/assets/images/2/4-urlconf.png)
 </span>
 
+---
+
+### Part2: Django Girls TutorialでDjangoを学ぼう
+
+1. 作るファイルのまとまりについて：プロジェクトとアプリケーション
+2. **アプリケーションに含まれるファイルについて**
+    - URL設定、**ビュー**
+    - テンプレート、モデル
+
 +++
 
-### Django ビュー
+### ビュー
 
-- HTTPレスポンスを返す
-- 単純なレスポンス：`HttpResponse`
-- ステータスコードは指定不要
-- メッセージボディを指定して返す
+- アプリケーションに含まれる`views.py`というファイルのこと
+- 空のファイルができており、編集していく
+- Django Girls Tutorialの範囲では、`views.py`に**関数**を追加
+
++++
+
+### ビューの動き
+
+1. URL設定から呼び出される（リクエストの情報も渡る）
+2. リクエストの情報を使った処理をする（送信されたデータを使うなど）
+3. レスポンスを返す
 
 +++
 
@@ -201,14 +284,21 @@ GET http://example.com/ HTTP/1.1
 @fa[github] [blog/views.py (Tag: 1-url_and_view)](https://github.com/ftnext/explain-how-django-works-for-beginner/blob/8f1eaa0856cbfb499d05fdcdb2adb4fb997665ea/blog/views.py)
 
 ```python
-def post_list(request):
-    # 引数requestはHttpRequest（Django流のHTTPリクエストの扱い方）
-    # request.methodでHTTPメソッドを確認できる
-    if request.method == 'GET':
-        # メッセージボディを指定して，HttpResponseを返す（→ブラウザに表示される）
+def post_list(request):  # 関数として用意する
+    # 引数requestはリクエスト。request.methodのようにリクエストの持つ情報を処理で使える
+    if request.method == 'GET':  # ブラウザにURLを入力してアクセスした場合を表す
+        # レスポンスを返す
         return HttpResponse('GETリクエストへのレスポンスです')
-    # 以下略
+    # else以下は省略
 ```
+
++++
+
+### コード例が返すレスポンス
+
+<span class="sixty-percent-img">
+![URL設定とビューからなるコード例が返すレスポンスを開発者ツールで覗く](spzcolab_Jan_django/assets/images/2/4-http_response.png)
+</span>
 
 +++
 
@@ -220,46 +310,41 @@ def post_list(request):
 
 ---
 
-### 3-3. テンプレート
+### Part2: Django Girls TutorialでDjangoを学ぼう
 
-- レスポンスとして**HTML**を返すWebアプリになる（CoLabのようなWebアプリに近づく）
-- レスポンスのメッセージボディにHTMLを文字列として含める
-
-+++
-
-### HTML
-
-- タグを使って構造を指定する
-- 例：見出し、段落、箇条書き、画像、表（詳しくは[HTMLの基本 | MDN web docs](https://developer.mozilla.org/ja/docs/Learn/Getting_started_with_the_web/HTML_basics)）
-- ブラウザはHTMLを解析して描画している（レスポンスはあくまで文字列）
+1. 作るファイルのまとまりについて：プロジェクトとアプリケーション
+2. **アプリケーションに含まれるファイルについて**
+    - URL設定、ビュー
+    - **テンプレート**、モデル
 
 +++
 
-### レスポンスとして返されたHTMLを覗く
+### URL設定とビューで動くWebアプリ
 
-<span class="seventy-percent-img">
-![この後紹介するHTMLを含むレスポンスを覗いた例](spzcolab_Jan_django/assets/images/2/5-html_response.png)
-</span>
-
-+++
-
-### Django テンプレート
-
-- Webアプリの見た目に関わる
-- テンプレート≒HTML（テンプレートにはDjango独自のタグがある）
-- 仲間：CSS（見た目の指定）、JavaScript（動きをつける）
+- レスポンスを文字列で返した
+- connpassのようにHTMLを返したい。ビューにも書けるが、長いHTMLになると書きづらい😑
+- **ビューとは別にHTMLのファイルを用意**し、読み込んでレスポンスを作ることにする
 
 +++
 
-### URL設定、ビュー、テンプレートのイメージ
+### テンプレート
 
-<span class="seventy-percent-img">
-![URL設定→ビューはこれまで通り。ビューはテンプレートを使ってHTMLを含んだレスポンスを作り、それを返す](spzcolab_Jan_django/assets/images/2/8-urlconf_view_template.png)
-</span>
+- アプリケーションの中に作る`templates`ディレクトリに置かれるHTMLファイルのこと
+- テンプレートは、HTML+Django独自のタグ
+- HTMLに沿ってWebブラウザに表示されるので、テンプレートはWebアプリの見た目に関わる（Appendix 2-2）
 
 +++
 
-### Django テンプレートのコード例
+### ビューがテンプレートを使う
+
+1. URL設定から呼び出される
+2. リクエストの情報を使った処理をする
+3. **テンプレートを読み込み**、レスポンスを作る（処理結果を埋め込むなど）
+4. レスポンスを返す
+
++++
+
+### テンプレートのコード例
 
 @fa[github] [blog/templates/blog/post_list.html (Tag: 2-url_view_template)](https://github.com/ftnext/explain-how-django-works-for-beginner/blob/1db8d0827afac7514725db489fc21efcf82bf25d/blog/templates/blog/post_list.html)
 
@@ -279,41 +364,101 @@ def post_list(request):
 
 ```python
 def post_list(request):
-    # 指定したテンプレート（HTML）をメッセージ本文に入れた
-    # HTTPレスポンス（HttpResponse）を、render関数で作って返す
+    # 指定したテンプレート（HTML）を使ったレスポンスを、render関数で作って返す。
+    # 'blog/post_list.html'は前のスライドで示したテンプレートのこと
+    # （templatesディレクトリの下のblog/post_list.html）
     return render(request, 'blog/post_list.html', {})
-    # URL設定に対してテンプレートが対応する形になる
 ```
+
++++
+
+### レスポンスとして返されたHTMLを覗く
+
+<span class="seventy-percent-img">
+![テンプレートを使ったコード例が返すHTMLを含むレスポンスを覗いた例](spzcolab_Jan_django/assets/images/2/5-html_response.png)
+</span>
+
++++
+
+### URL設定、ビュー、テンプレートのイメージ
+
+<span class="seventy-percent-img">
+![URL設定→ビューはこれまで通り。ビューはテンプレートを使ってHTMLを含んだレスポンスを作り、それを返す](spzcolab_Jan_django/assets/images/2/8-urlconf_view_template.png)
+</span>
 
 ---
 
-### 3-4. モデル
+### Part2: Django Girls TutorialでDjangoを学ぼう
 
-- 決まったHTMLをレスポンスとして返せる（しかし、勉強会100000回分は作りたくない。。）
-- データをWebアプリとは別で管理する（データベース）
-- リクエストに応じてデータを取り出したり保存したりする
+1. 作るファイルのまとまりについて：プロジェクトとアプリケーション
+2. **アプリケーションに含まれるファイルについて**
+    - URL設定、ビュー
+    - テンプレート、**モデル**
 
 +++
 
-### データベースとモデル
+### HTMLが返せるようになったWebアプリ
 
-- データベースのイメージは、ExcelやGoogleスプレッドシートの表
+- URLに対して決まったHTMLを返している
+- 例えばconnpassには、勉強会が10万以上ある（パス`event/152678/`）
+- 10万ものHTMLを個別に用意する？ 流石に厳しい😖
+
++++
+
+### connpassを観察する
+
+- 勉強会のページのレイアウトが同じ（共通のHTML）
+- 勉強会の名前など、勉強会ごとにデータが異なる箇所がある（個別のデータ）
+
++++
+
+### データベース
+
+- データをWebアプリとは別で管理する
+- ブラウザからのリクエストに応じて、データベースから対応するデータを取得
+- 取得したデータを埋め込んだHTMLをレスポンスとして返す
+
++++
+
+### データベースのイメージ
+
+表計算ソフトの表（例：**ブログ記事**に必要な列があり、行が追加されていく）
+
+著者 | タイトル | 本文 | 作成日 | 公開日
+----- | ----- | ----- | ----- | ----- 
+nikkie | ... | ... | 2/24 | 2/24
+
++++
+
+### モデル
+
 - モデルを通してデータベースにアクセスする
+- アプリケーションに含まれる`models.py`というファイルのこと
+- 空のファイルができており、編集していく（クラスを追加）
 
 +++
 
-### データを埋め込んでレスポンスを作る
+### ビューがモデルを使う
 
-- ビューがモデルを使って該当するデータを取得
-- 取得したデータをテンプレートで表示する
+1. URL設定から呼び出される
+2. リクエストの情報を使った処理をする（**必要なデータをモデルを通して取得**）
+3. テンプレートを読み込み、レスポンスを作る（処理結果を埋め込むなど）
+4. レスポンスを返す
 
 +++
 
-### URL設定、ビュー、テンプレート、モデルの連携
+### モデルのコード例
 
-<span class="seventy-percent-img">
-![URL設定に対応するビューが呼び出され、必要なモデルにアクセス、取得した結果をテンプレートに埋め込み、HTMLを生成して返す](spzcolab_Jan_django/assets/images/2/9-urlconf_view_model_template.png)
-</span>
+@fa[github] [blog/models.py (Tag: 3-url_view_model_template)](https://github.com/ftnext/explain-how-django-works-for-beginner/blob/3b0133546c8a8a565de5a0427f164b666b5378e0/blog/models.py)
+
+```python
+class Post(models.Model):  # ブログ記事が持つデータ項目を表す
+    author = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)  # 著者
+    title = models.CharField(max_length=200)  # タイトル
+    text = models.TextField()  # 本文
+    created_date = models.DateTimeField(default=timezone.now)  # 作成日時
+    published_date = models.DateTimeField(blank=True, null=True)  # 公開日時
+```
 
 +++
 
@@ -323,7 +468,7 @@ def post_list(request):
 
 ```python
 def post_list(request):
-    # ブログ投稿のうち、published_date（公開日）が現在より前のものを取得し。
+    # ブログ投稿のうち、published_date（公開日時）が現在以前のものを取得し。
     # 公開日の昇順（以前に公開されたものほど上）に並べ替える
     posts = Post.objects.filter(published_date__lte=timezone.now()).order_by('published_date')
     # 取得した投稿データpostsをテンプレートでpostsという名前で扱えるように渡す
@@ -349,3 +494,36 @@ def post_list(request):
   </div>
 {% endfor %}
 ```
+
++++
+
+### URL設定、ビュー、テンプレート、モデルの連携
+
+<span class="seventy-percent-img">
+![URL設定に対応するビューが呼び出され、必要なモデルにアクセス、取得した結果をテンプレートに埋め込み、HTMLを生成して返す](spzcolab_Jan_django/assets/images/2/9-urlconf_view_model_template.png)
+</span>
+
+---
+
+### Part2ではDjango Girls Tutorialを見てきました
+
+1. 作るファイルのまとまりについて：プロジェクトとアプリケーション
+2. アプリケーションに含まれるファイルについて
+    - URL設定、ビュー
+    - テンプレート、モデル
+
++++
+
+### [Django Girls Tutorial](https://tutorial.djangogirls.org/ja/)のアプローチ
+
+- URL設定、ビュー、モデル、テンプレートを1つずつ順番に追加
+- Djangoのアプリケーションには4つ必要なので、**4つ揃うまではエラーが出る**
+- エラーの解決策を学び、開発手順を身につける
+
++++
+
+### 📌[Django Girls Tutorial](https://tutorial.djangogirls.org/ja/)の取り組み方案
+
+- Pythonのインストールや文法から始まります。知っているところは飛ばしてください
+- Djangoが初めてでしたら**「デプロイ」に関係する部分は飛ばす**のをオススメします
+- 1周めでDjangoに慣れる、2周めでデプロイに挑戦するというように**何周も**してみてください
