@@ -51,9 +51,9 @@ YouTube Liveにコメントして、ふだんPython🐍でやっていること�
 
 ### お品書き
 
-1. Webアプリについて知ろう
-2. Django Girls TutorialでDjangoを学ぼう
-3. Django Girls Tutorialの外の世界へ
+1. Webアプリについて知ろう（5分）
+2. Django Girls TutorialでDjangoを学ぼう（13分）
+3. Django Girls Tutorialの外の世界へ（7分）
 
 ---?include=pycon_shizu_Feb_django_intro/parts/1-overview.md
 
@@ -111,3 +111,7 @@ YouTube Liveにコメントして、ふだんPython🐍でやっていること�
 ### Happy Django Life!
 
 Contact: [@fa[twitter] @ftnext](https://twitter.com/ftnext)／[匿名質問箱](https://peing.net/ja/ftnext)
+
+Appendixが続きます
+
+---?include=pycon_shizu_Feb_django_intro/parts/4-appendix.md
