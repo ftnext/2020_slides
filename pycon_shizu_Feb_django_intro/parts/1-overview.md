@@ -29,8 +29,8 @@
 
 ### 🕸️Web🕸️ 1/2
 
-- インターネット（世界中のコンピュータがつながるネットワーク🌐）を使った情報共有の仕組み
-- **HTML**で書いて情報に意味づけ（ここがタイトル、ここが本文、、、）（Appendix 1-1）
+- インターネットを使った**情報共有**の仕組み（👉Appendix 1-1）
+- **HTML**で書いて情報に意味づけ（ここがタイトル、ここが本文、、、）（👉Appendix 1-2）
 
 ```html
 <!DOCTYPE html>
@@ -69,15 +69,19 @@
 
 https://pycon-shizu.connpass.com/event/152678/
 
+<span class="eighty-percent-img">
 ![connpassにあるPyCon mini 静岡のページ](pycon_shizu_Feb_django_intro/assets/images/1/1-connpass_pycon_shizu.png)
+</span>
 
 +++
 
 ### 勉強会に申し込む
 
-参加枠など入力したデータをconnpassが処理しています
+参加枠などブラウザに入力したデータをconnpassが処理します
 
+<span class="sixty-percent-img">
 ![connpassで勉強会に申し込む（PyCon JP スタッフmtgを例に）](pycon_shizu_Feb_django_intro/assets/images/1/2-connpass_application_form.png)
+</span>
 
 ---
 
@@ -96,11 +100,13 @@ https://pycon-shizu.connpass.com/event/152678/
 
 +++
 
-### デモアプリを操作してみてください
+### [デモアプリ](https://nikkie-pycon-shizu-django-blog.herokuapp.com/)の操作
 
 1.記事を選択 ➡️ 2.コメントを入力
 
+<span class="eighty-percent-img">
 ![記事にコメントが増えていきます](pycon_shizu_Feb_django_intro/assets/images/1/3-demo_app_comment.png)
+</span>
 
 +++
 
@@ -136,7 +142,7 @@ https://pycon-shizu.connpass.com/event/152678/
 
 ### Webアプリの実態は大量のファイル📁
 
-```
+```plaintext
 .
 ├── blog
 ├── db.sqlite3
