@@ -29,7 +29,7 @@
 
 +++
 
-### ログイン機能を追加
+### 特筆！ログイン機能を追加
 
 ![デモアプリのログイン画面](pycon_shizu_Feb_django_intro/assets/images/3/1-demo_app_login.png)
 
@@ -37,8 +37,8 @@
 
 ### ログイン
 
-- Webアプリにたいてい備わっているログイン
 - 本人かどうかを確認するための仕組み（認証 Authentication）
+- Webアプリにたいてい備わっている
 
 +++
 
@@ -53,7 +53,7 @@
 ### ログインの仕組み 2/2
 
 - 照合できたら、以降のリクエストで使う"合言葉"を含めたレスポンスを返す
-- リクエストに"合言葉"が入っていれば、引き続き本人のアクセスと判断できる
+- リクエストに**"合言葉"が含まれれば、本人のアクセスと判断**できる
     - デモアプリの場合、ブログの記事の作成・編集ができる
     - connpassの場合、申込済みの勉強会の情報を表示
 
@@ -85,7 +85,7 @@
 
 ### Webアプリでよくみるユーザ管理機能 その1
 
-パスワードが思い出せない🤨→[パスワード再設定](https://connpass.com/account/password_reset/)
+パスワードが思い出せない🤨→[connpass パスワード再設定](https://connpass.com/account/password_reset/)
 
 ![connpassのパスワード再設定画面](pycon_shizu_Feb_django_intro/assets/images/3/2-connpass_password_reset.png)
 
@@ -93,7 +93,7 @@
 
 ### ユーザのパスワードに関する機能
 
-- ログアウトしていてパスワードがわからない
+- ログアウトしていてパスワードが思い出せず変更
 - ログインしている状態でパスワードを変更
 
 これらもDjangoが用意している（[認証ビュー](https://docs.djangoproject.com/ja/3.0/topics/auth/default/#module-django.contrib.auth.views)）
@@ -126,9 +126,11 @@ urlpatterns = [
 
 ### Webアプリでよくみるユーザ管理機能 その2
 
-[ユーザ登録](https://connpass.com/signup/)
+[connpass ユーザ登録](https://connpass.com/signup/)
 
+<span class="seventy-percent-img">
 ![connpassのユーザ登録画面](pycon_shizu_Feb_django_intro/assets/images/3/3-connpass_signup.png)
+</span>
 
 +++
 
@@ -158,7 +160,7 @@ class Register(CreateView):
 
 - Djangoの機能は豊富で1つのチュートリアルではカバーしきれない➡️検索して調べていく
 - 関数ではなくクラスを使ったビューの書き方もあると知っていると**参照できる情報が広がる**
-- ジェネリックビューを使えば早く開発できるという声もあります（賛否あり）
+- ジェネリックビューの利用には賛否あり（nikkieは個人開発では利用したい派）
 
 ---
 
@@ -179,12 +181,12 @@ class Register(CreateView):
 
 ### `asgi.py` がもたらすもの
 
-- Webブラウザの**読み込みがいらない**Webアプリが作れる
-- 例えば、Slack（チャットアプリ）は、ページを読み込まずに新しい投稿が見られる（Appendix 3-1）
+- Webブラウザの**再読み込みがいらない**Webアプリが作れる
+- 例えば、Slack（チャットアプリ）は、ページを再読み込みせずに新しい投稿が見られる（👉Appendix 3-1）
 
 +++
 
-### 読み込み不要なWebアプリに向けて開発進行中！
+### 再読み込み不要なWebアプリに向けて開発進行中！
 
 - 現在は試験的。ビューはまだサポートされていない（ref: [非同期サポート](https://docs.djangoproject.com/ja/3.0/topics/async/)）
-- 読み込み不要なWebアプリが作れるようにする提案：[DEP 0009](https://github.com/django/deps/blob/master/accepted/0009-async.rst#sequencing)。承認され、実装進行中
+- 再読み込み不要なWebアプリが作れるようにする提案：[DEP 0009](https://github.com/django/deps/blob/master/accepted/0009-async.rst#sequencing)。承認され、実装進行中
