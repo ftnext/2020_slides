@@ -57,7 +57,13 @@ YouTube Liveにコメントして、ふだんPython🐍でやっていること�
 
 ---?include=pycon_shizu_Feb_django_intro/parts/1-overview.md
 
----?include=pycon_shizu_Feb_django_intro/parts/2-django_girls_tutorial.md
+---?include=pycon_shizu_Feb_django_intro/parts/2-django_girls_tutorial/2-1_request_response.md
+
+---?include=pycon_shizu_Feb_django_intro/parts/2-django_girls_tutorial/2-2-urlconf-view.md
+
+---?include=pycon_shizu_Feb_django_intro/parts/2-django_girls_tutorial/2-3_template_model.md
+
+---?include=pycon_shizu_Feb_django_intro/parts/2-django_girls_tutorial/2-4_recommendation.md
 
 ---?include=pycon_shizu_Feb_django_intro/parts/3-after_django_girls.md
 
