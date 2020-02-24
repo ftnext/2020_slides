@@ -1,103 +1,125 @@
 ### Djangoで始めるWeb開発の世界
 
-1. 前提：Webアプリ、フレームワーク、Djangoについて（5分）
-2. Django Girls Tutorialで学ぶDjangoの使い方（12分）
-3. Django Girls Tutorialから飛び出そう（10分）
+1. **Webアプリについて知ろう**
+2. Django Girls TutorialでDjangoを学ぼう
+3. Django Girls Tutorialの外の世界へ
 
 +++
 
-### Webアプリ、フレームワーク、Djangoについて
+### Part1: Webアプリについて知ろう
 
 1. Webアプリとは
-2. フレームワークとは
-3. Djangoとは
+2. Webアプリを作ってみよう
 
 ---
 
-### 1. Webアプリとは
+### Part1: Webアプリについて知ろう
 
-- Webアプリ＝Webアプリケーション
-- 「Web」：**ブラウザから**使う（アプリのインストール不要）
-- アプリケーション＝**特定の作業**のためのプログラム
-
-+++
-
-### Webアプリの例
-
-TODO：connpassに差し替え
-
-[サポーターズCoLab（勉強会のサイト）](https://supporterzcolab.com/)
-
-![サイトのスクリーンショット](spzcolab_Jan_django/assets/images/1/1-example_screenshot.png)
+1. **Webアプリとは**
+2. Webアプリを作ってみよう
 
 +++
 
-### Webアプリの例：サポーターズCoLab
+### Webアプリ（ウェブアプリ）
 
-- できる作業：勉強会の検索や申込み（操作できる）
-- ブラウザから使う（WordやExcelとは違って、手元のPCにインストールされていない）
+- Web + アプリ
+- アプリはアプリケーション（＝**特定の作業**のためのプログラム）の略
+
++++
+
+### 🕸️Web🕸️ 1/2
+
+- インターネット（世界中のコンピュータがつながるネットワーク🌐）を使った情報共有の仕組み
+- **HTML**で書いて情報に意味づけ（ここがタイトル、ここが本文、、、）（Appendix 1-1）
+
+```html
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <title>PyCon mini Shizuoka</title>
+  </head>
+  <body>
+    <section id="content" class="body page-section">
+    </section>
+  </body>
+</html>
+```
+
++++
+
+### 🕸️Web🕸️ 2/2
+
+- Webブラウザ（Google Chrome, Firefoxなど）がHTMLを解釈して表示
+- **Web**アプリは、**Webブラウザ**から使うアプリ
+- PCにインストールするのはWebブラウザのみ
+
++++
+
+### 皆さんが使ったことのあるWebアプリ
+
+[connpass](https://connpass.com/)
+
+- Webブラウザから使う（connpassはWordやExcelのように手元のPCにインストールされていない）
+- 作業として、勉強会の検索や申込みができる
+
++++
+
+### 勉強会のページを見る
+
+https://pycon-shizu.connpass.com/event/152678/
+
+![connpassにあるPyCon mini 静岡のページ](pycon_shizu_Feb_django_intro/assets/images/1/1-connpass_pycon_shizu.png)
+
++++
+
+### 勉強会に申し込む
+
+参加枠など入力したデータをconnpassが処理しています
+
+![connpassで勉強会に申し込む（PyCon JP スタッフmtgを例に）](pycon_shizu_Feb_django_intro/assets/images/1/2-connpass_application_form.png)
 
 ---
 
-### 2. フレームワークとは
+### Part1: Webアプリについて知ろう
 
-- 今回は、**Webアプリケーションフレームワーク**のこと
-- Webアプリを開発しやすくするための土台
-- フレームワークを使うことでWebアプリを速く開発できる
-
-+++
-
-### インターネットとWeb
-
-- インターネット≒ネットワークで繋がったコンピュータ群
-- コンピュータ間で情報共有の仕組みとして、World Wide Web（単にWeb）
+1. Webアプリとは
+2. **Webアプリを作ってみよう**
 
 +++
 
-### Webの根幹：HTTP
+### Webアプリは作れる！
 
-- Web（World Wide Web）はインターネットを覆っている
-- Webでコンピュータ同士がする**通信**は、HTTPという**取り決め**に則る
-
-+++
-
-### HTTPでの通信の登場人物
-
-<span class="eighty-percent-img">
-![クライアント（＝Webブラウザ。ChromeやFirefox）とサーバ（＝Djangoで作ったWebアプリ）が通信する](spzcolab_Jan_django/assets/images/1/4-client_server.png)
-</span>
+- 皆さんの知っているPython🐍で作れます！
+- デモ用のブログアプリ：https://nikkie-pycon-shizu-django-blog.herokuapp.com/
+- 今回話すチュートリアルを最後までやると同様のWebアプリが作れます
 
 +++
 
-### HTTP通信（ざっくり）
+### デモアプリを操作してみてください
 
-<span class="eighty-percent-img">
-![クライアントはリクエストを送信。サーバはリクエストに応じた処理をしてレスポンスを返却。クライアントはレスポンスを解釈して表示](spzcolab_Jan_django/assets/images/1/5-request_response.png)
-</span>
+1.記事を選択 ➡️ 2.コメントを入力
 
-+++
-
-### リクエストを覗く（ブラウザの開発者ツール）
-
-![サポーターズCoLabのサイトを見たときのリクエスト](spzcolab_Jan_django/assets/images/1/2-spzcolab_request.png)
+![記事にコメントが増えていきます](pycon_shizu_Feb_django_intro/assets/images/1/3-demo_app_comment.png)
 
 +++
 
-### レスポンスを覗く（ブラウザの開発者ツール）
+### Webアプリをどう作るか？
 
-![サポーターズCoLabのサイトにアクセスしたときのレスポンス](spzcolab_Jan_django/assets/images/1/3-spzcolab_response.png)
+- 1つの方法として**フレームワーク**を使う
+- このトークでは、フレームワーク＝*Webアプリケーション*フレームワーク
 
 +++
 
-### フレームワークとHTTP
+### フレームワークとは
 
-- フレームワークは、サーバに置くWebアプリを開発するために使う
-- フレームワークを使うことで、開発者は**HTTPを直接扱わなく**て済む
-- フレームワークの「流儀」に沿って、プログラムを書いて開発する
+- Webアプリに必要なコードがすでに用意された土台
+- 開発者はフレームワークの**流儀に従って**コードを追加する
+- フレームワークを使うことでWebアプリを**速く開発**できる
 
----
++++
 
-### 3. Djangoとは
+### Djangoとは
 
 - Pythonで書けるフレームワークの1つ
 - 「締切がある完璧主義者のためのフレームワーク」と標榜
@@ -107,5 +129,34 @@ TODO：connpassに差し替え
 ### 締切がある完璧主義者向け
 
 - 😄Webアプリに必要な機能は一通り用意されている
-- 😄どんな規模のWebアプリでも作れる
 - 😅多機能な分、学習コストが高い
+- 😄Webに精通していなくてもDjangoの流儀に反しなければ、**安全**で**拡張可能**なWebアプリが作れる
+
++++
+
+### Webアプリの実態は大量のファイル📁
+
+```
+.
+├── blog
+├── db.sqlite3
+├── manage.py
+├── mysite
+├── myvenv
+└── requirements.txt
+```
+
++++
+
+### DjangoでWebアプリを作る
+
+- Djangoの流儀に沿ってファイルを配置する
+- ファイルの中には、Djangoの流儀に従ってPythonを書く
+
++++
+
+### Webアプリ開発＝ファイルを作る
+
+- **エディタ**を使って`.py`や`.html`ファイルを作る
+- エディタの例：Visual Studio Code, Atom, Sublime Textなど
+- ❗️Jupyter Notebookはエディタではないため、Webアプリ開発では使いません
