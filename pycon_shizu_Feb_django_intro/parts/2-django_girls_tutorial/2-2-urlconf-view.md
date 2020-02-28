@@ -17,7 +17,7 @@
 ### URL設定の動き
 
 1. リクエストに含まれるURLのパスの部分を見る
-    - https://nikkie-pycon-shizu-django-blog.herokuapp.com/post/1/ であれば、パスは `post/1/`（👉Appendix 2-2）
+    - https://nikkie-pycon-shizu-django-blog.herokuapp.com/post/1/ であれば、パスは `post/1/`（最初に見つかった単一の`/`の後全て 👉Appendix 2-2）
 2. 設定を元に、パスに対応するビューを呼び出す
 
 +++
@@ -64,7 +64,7 @@ urlpatterns = [
 ### ビューの動き
 
 1. URL設定から呼び出される（リクエストの情報も渡る）
-2. リクエストの情報を使った処理をする（送信されたデータを使うなど）
+2. **リクエストの情報を使った処理**をする（送信されたデータを使うなど）
 3. レスポンスを返す
 
 +++

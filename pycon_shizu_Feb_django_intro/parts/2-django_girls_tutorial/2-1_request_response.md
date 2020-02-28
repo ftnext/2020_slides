@@ -8,7 +8,7 @@
 
 ### [Django Girls Tutorial](https://tutorial.djangogirls.org/ja/)とは
 
-- プログラミングに初めて挑戦する人向けのワークショップの教材
+- プログラミングに初めて挑戦する方向けのワークショップの教材
 - Djangoでブログアプリを作る
 - Webに公開されており、誰でも利用可能
 
@@ -41,10 +41,10 @@ Djangoの用語としての意味📗
 
 +++
 
-### Djangoではファイルを配置するルール
+### Djangoはルールに沿ってファイルを配置してほしい
 
 - Django「プロジェクトにはこれこれのファイルを配置してください」
-- ➡️**コマンドを使って**必要なファイルを作ることができる
+- ➡️用意された**コマンドを使って**必要なファイルを作ることができる
 
 +++
 
@@ -96,7 +96,7 @@ Djangoの用語としての意味📗
 
 1. 作るファイルのまとまりについて：プロジェクトとアプリケーション
 2. **アプリケーションに含まれるファイルについて**
-    - **URL設定、ビュー**
+    - URL設定、ビュー
     - テンプレート、モデル
 
 +++
@@ -119,10 +119,9 @@ Djangoの用語としての意味📗
 
 +++
 
-### URL設定とビュー
+### 最小限のWebアプリ
 
-- この2つがあれば、Djangoのアプリケーションは動作する
-- ＝最小限のWebアプリが作れる
+- URL設定とビューがあれば、Djangoのアプリケーションは動作する
 - ➡️それぞれの説明に必要なので、Webの構成要素を簡単に紹介
 
 ---
@@ -136,11 +135,19 @@ Djangoの用語としての意味📗
 
 +++
 
+### リクエストとレスポンス
+
+<span class="eighty-percent-img">
+![Webブラウザはリクエストを送信。サーバはリクエストに応じた処理をしてレスポンスを返却。Webブラウザはレスポンスを解釈して表示](pycon_shizu_Feb_django_intro/assets/images/2/1-browser_server_request_response.png)
+</span>
+
++++
+
 ### リクエスト
 
-- WebブラウザにURLを入力（Firefoxでは、"Googleで検索、またはURLを入力します"）
+- WebブラウザにURLを入力（Firefoxでは、"Googleで検索、またはURLを入力します"）してEnter
   - 例：https://nikkie-pycon-shizu-django-blog.herokuapp.com/post/1/
-- URLの一部からWebアプリを動かすコンピュータ（サーバ）を特定
+- ブラウザはURLの一部からWebアプリを動かすコンピュータ（サーバ）を特定
 - URLやブラウザに入力したデータを**リクエスト**としてサーバに送信
 
 +++
@@ -153,7 +160,7 @@ Djangoの用語としての意味📗
 
 +++
 
-### リクエストとレスポンス
+### 再掲：リクエストとレスポンス
 
 <span class="eighty-percent-img">
 ![Webブラウザはリクエストを送信。サーバはリクエストに応じた処理をしてレスポンスを返却。Webブラウザはレスポンスを解釈して表示](pycon_shizu_Feb_django_intro/assets/images/2/1-browser_server_request_response.png)

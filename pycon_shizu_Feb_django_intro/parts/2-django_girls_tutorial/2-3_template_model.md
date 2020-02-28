@@ -19,7 +19,7 @@
 
 - アプリケーションの中に作る`templates`ディレクトリに置かれるHTMLファイルのこと
 - テンプレートは、**HTML+Django独自のタグ**
-- HTMLに沿ってWebブラウザに表示されるので、テンプレートはWebアプリの見た目に関わる（👉Appendix 2-3）
+- HTMLに沿ってWebブラウザに表示されるので、テンプレートはWebアプリの**見た目**に関わる（👉Appendix 2-3）
 
 +++
 
@@ -87,7 +87,7 @@ def post_list(request):
 
 ### HTMLが返せるようになったWebアプリ
 
-- URLに対して決まったHTMLを返している
+- URLに対して決まったHTML（テンプレート）は返せるようになった
 - 例えばconnpassには、勉強会が10万以上ある（冒頭の例のパス `event/152678/`）
 - 10万ものHTMLを個別に用意する？ 流石に厳しい😖
 
@@ -95,16 +95,15 @@ def post_list(request):
 
 ### connpassを観察する
 
-- 勉強会のページのレイアウトが同じ（共通のHTML）
+- 勉強会のページのレイアウトが同じ（共通のHTML≒テンプレート）
 - 勉強会の名前など、勉強会ごとにデータが異なる箇所がある（個別のデータ）
+- ➡️**データをテンプレートから切り出し**て管理する
 
 +++
 
-### データベース
+### 切り出したデータを管理する：データベース
 
-**データをテンプレートから切り出し**て管理する
-
-1. ブラウザからのリクエストに応じて、データベースから対応するデータを取得
+1. Webブラウザからの**リクエストに応じて**、データベースから対応する**データを取得**
 2. 取得したデータを埋め込んだHTMLをレスポンスとして返す
 
 +++
@@ -121,7 +120,7 @@ nikkie | ... | ... | 2/24 | 2/24
 
 ### モデル
 
-- データベースのデータを取得・作成に使われる
+- データベースの**データを取得・作成に使われる**
 - アプリケーションに含まれる`models.py`というファイルを指す
 - 空のファイルができており、編集していく（クラスを追加）
 
@@ -157,10 +156,10 @@ class Post(models.Model):  # ブログ記事が持つデータ項目を表す
 
 ```python
 def post_list(request):
-    # ブログ投稿のうち、published_date（公開日時）が現在以前のものを取得し。
+    # ブログ記事のうち、published_date（公開日時）が現在以前のものを取得し。
     # 公開日の昇順（以前に公開されたものほど上）に並べ替える
     posts = Post.objects.filter(published_date__lte=timezone.now()).order_by('published_date')
-    # 取得した投稿データpostsをテンプレートでpostsという名前で扱えるように渡す
+    # 取得した複数の記事postsをテンプレートでpostsという名前で扱えるように渡す
     return render(request, 'blog/post_list.html', {'posts': posts})
 ```
 
@@ -171,8 +170,8 @@ def post_list(request):
 @fa[github] [blog/templates/blog/post_list.html (Tag: 3-url_view_model_template)](https://github.com/ftnext/explain-how-django-works-for-beginner/blob/3b0133546c8a8a565de5a0427f164b666b5378e0/blog/templates/blog/post_list.html)
 
 ```html
-{# データベースから取り出した投稿を1つずつ繰り返し処理する。 #}
-{# 投稿の公開日やタイトル、本文を入れたHTMLを作る（ここまでコメント） #}
+{# データベースから取り出した記事を1つずつ繰り返し処理する。 #}
+{# 記事の公開日やタイトル、本文を入れたHTMLを作る（ここまでコメント） #}
 {% for post in posts %}
   <div class="post">
     <div class="date">

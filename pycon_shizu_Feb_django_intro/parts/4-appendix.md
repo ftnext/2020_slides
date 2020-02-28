@@ -72,3 +72,7 @@
 - Tech業界における女性の割合が少ないという問題意識から発足
 - 2014年にベルリンから始まり、世界各地で開催（[Tokyo](https://djangogirls.org/tokyo/)でも）
 - また、Tokyoでは毎月勉強会を開催（[connpassグループ](https://djangogirls-org.connpass.com/)）
+
++++
+
+# EOF
