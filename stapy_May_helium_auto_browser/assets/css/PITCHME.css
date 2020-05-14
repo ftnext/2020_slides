@@ -9,3 +9,7 @@
   box-shadow: none;
   margin-top: 3%;
 }
+
+.reveal li {
+  font-family: 'Source Sans Pro', Helvetica, sans-serif;
+}
