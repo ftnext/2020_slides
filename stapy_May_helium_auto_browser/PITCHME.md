@@ -31,7 +31,7 @@ https://sessionize.com/pyconjp2020/
 
 ### LT希望者を集計する手順
 
-1. CSVをconnpassからダウンロード
+1. アンケート回答のCSVをconnpassからダウンロード
 2. LT希望者を集計（PythonスクリプトでCSV処理を自動化）
 
 ![](stapy_May_helium_auto_browser/assets/images/export_participants_csv.png)
@@ -89,7 +89,7 @@ click("ログインする")
 ### まとめ：繰り返すブラウザ操作をPythonにやらせよう
 
 - stapyのスタッフ活動にPythonを使った例を紹介
-- connpassからの参加者のダウンロードをHeliumで自動化した
+- connpassから参加者アンケートをダウンロードする作業をHeliumで自動化した
 - Heliumはブラウザ自動化を**劇的に簡略化**する印象。よろしければ！
 
 +++
