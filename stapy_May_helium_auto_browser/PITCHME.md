@@ -8,12 +8,12 @@
 
 - ハンドルネーム「にっきー」 (@fa[twitter] [@ftnext](https://twitter.com/ftnext))
 - Python🐍歴2年ほど。仕事ではPythonで機械学習 & Web API開発
-- みんなのPython勉強会スタッフ 兼 4代目LT王子
+- みんなのPython勉強会スタッフ 兼 4代目LT王子🤴
 
 +++
 
 ### お知らせ：PyCon JP 2020
-### 8/28（金）,29（土） オンライン開催
+### 8/28(金),29(土) オンライン開催
 ### トーク募集中 5/31(日)まで
 
 https://sessionize.com/pyconjp2020/
@@ -40,8 +40,8 @@ https://sessionize.com/pyconjp2020/
 
 ### 繰り返すブラウザ操作をPythonにやらせよう
 
-- ダウンロードしたCSVからの集計は自動化した（けれどそんなに便利じゃない）
-- CSVをconnpassからダウンロードするのもPythonにやらせよう！
+- ダウンロードしたCSVからの集計は自動化した（けれどそんなに便利じゃない😢）
+- CSVをconnpassからダウンロードするのもPythonにやらせよう！💡
 
 +++
 
@@ -53,25 +53,26 @@ https://sessionize.com/pyconjp2020/
 
 - 使ったパッケージ @fa[github] [mherrmann/selenium-python-helium](https://github.com/mherrmann/selenium-python-helium)
 - 導入：`pip install helium`
+- 詳しくは、[今回のスクリプト(Gist)](https://gist.github.com/ftnext/405edadcd84893f4e0c79b152845816f)
 
 +++
 
 ### Helium
 
 - Seleniumをラップしている
-- → 非常に簡単にブラウザ自動化ができる
+- 👉非常に簡単にブラウザ自動化ができる
 - ChromeとFirefoxをサポート
 
 +++
 
-### Helium is awesome!
+### Helium is awesome!😍
 
 ```python
 from helium import click, start_firefox, write
 
 start_firefox("connpass.com/login")
-write('username', into='ユーザー名')
-write('password', into='パスワード')
+write("username", into="ユーザー名")
+write("password", into="パスワード")
 click("ログインする")
 ```
 
