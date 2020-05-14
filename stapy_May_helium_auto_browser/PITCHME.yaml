@@ -5,7 +5,7 @@ slide-number : true
 transition : none
 
 # ref: https://gitpitch.com/docs/themes/demos/#black-theme-template-demo
-theme            : template
+# theme            : template
 
 theme-background : [ "black" ]
 theme-headline   : [ "Raleway", "white", "none" ]
