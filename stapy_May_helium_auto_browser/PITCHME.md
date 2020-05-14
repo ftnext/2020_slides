@@ -25,12 +25,16 @@ https://sessionize.com/pyconjp2020/
 - 今回はLT希望者をアンケートで募集
 - **LT希望者が何名いるか**を定期的に集計したい
 
+![](stapy_May_helium_auto_browser/assets/images/stapy57_questionnaire.jpg)
+
 +++
 
 ### LT希望者を集計する手順
 
 1. CSVをconnpassからダウンロード
 2. LT希望者を集計（PythonスクリプトでCSV処理を自動化）
+
+![](stapy_May_helium_auto_browser/assets/images/export_participants_csv.png)
 
 +++
 
