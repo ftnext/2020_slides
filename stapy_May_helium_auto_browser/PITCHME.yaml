@@ -17,3 +17,5 @@ theme-controls   : [ "#C0C0C0" ]
 theme-margins    : [ "0", "15px" ]
 
 highlight        : ir-black
+
+theme-override : stapy_May_helium_auto_browser/assets/css/PITCHME.css
