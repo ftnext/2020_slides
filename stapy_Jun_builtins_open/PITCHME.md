@@ -1,5 +1,5 @@
 ## 組み込み関数openの秘密
-#### みんなのPython勉強会 #57 LT
+#### みんなのPython勉強会 #58 LT
 #### 2020/06/10 nikkie
 
 ---
@@ -14,8 +14,10 @@
 
 ### お知らせ
 ### スタッフをしているはPyCon JP 2020
-### 8/28(金),29(土) オンライン開催
-### スタッフ募集中
+### 8/28(金),29(土) オンライン開催！
+### 現在スタッフ募集中
+
+https://pyconjp.blogspot.com/2020/06/pycon-jp-2020-6.html
 
 ---
 
@@ -116,7 +118,7 @@ https://docs.python.org/ja/3/whatsnew/3.1.html#optimizations
 
 ### まとめ：組み込み関数openの秘密
 
-- `f = open('awesome.txt')`の`f`と`with open('awesome.txt') as f:`の`f`で代入されるものに違いはない
+- `f = open('awesome.txt')`の`f`と`with open('awesome.txt') as f:`の`f`に代入されるものに違いはない
 - その理由は、コンテキストマネージャの`__enter__`が自身を返すため
 - Pythonのソースを読むにはCが必要な箇所もある
 
