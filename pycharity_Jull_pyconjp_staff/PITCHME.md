@@ -1,5 +1,5 @@
-## PyCon JP スタッフ活動について
-#### Python Charity talks in Japan LT
+## PyCon JP スタッフ活動の紹介
+#### Python Charity Talks in Japan LT
 #### 2020/07/04 nikkie
 
 ---
@@ -7,8 +7,16 @@
 ### お前、誰よ (About nikkie)
 
 - ハンドルネーム「にっきー」 (@fa[twitter] [@ftnext](https://twitter.com/ftnext))
-- Python🐍歴2年半ほど
+- Python🐍歴2年半ほど（趣味➡️仕事）
 - 2019〜 PyCon JP スタッフ
+
++++
+
+### お前、誰よ (About nikkie)
+
+- ハンドルネーム「にっきー」 (@fa[twitter] [@ftnext](https://twitter.com/ftnext))
+- Python🐍歴2年半ほど（趣味➡️仕事）
+- 2019〜 PyCon JP スタッフ 👈この話をします
 
 ---
 
@@ -34,29 +42,30 @@
 
 ### PyCon JPって、何よ （Do you know PyCon JP?）
 
-- Python Conference: Pythonについての国際会議
-- 日本🇯🇵開催 → PyCon JP
-- 年に1度のお祭りであり、Pythonの知見を共有する場
+- **Py**thon **Con**ference: Pythonについての国際会議
+- 日本🇯🇵開催➡️PyCon JP
+- 年に1度の**お祭り**であり、Pythonの**知見を共有**する場
 
 +++
 
 ### PyCon JP 2020
 
-- 8/28(金)、29(土) オンライン開催
-- キーノート: 芝さん（将棋）、Richさん（Zappa）
+- 8/28(金)、29(土) **オンライン**開催
+- Pythonの知見を共有！：公募されたトークが**複数**トラック、**基調講演**、**招待講演**
 - 最新情報は[PyCon JP Blog](https://pyconjp.blogspot.com/)をチェック！
 
 ---
 
 ## このLTで紹介したいのは
-# PyCon JP スタッフ活動
+# PyCon JPをスタッフとして楽しむ方法
 
 +++
 
-### なぜ始めた？
+### nikkieはなぜ始めた？
 
-- 2018年、PyCon JPは人手が足りていなかった（重なる締切超過）のでnikkieは参加した
-- 今日のpycharityはPSFがピンチと聞いて集まった
+- PyCon JP 2018では締切を守れないことが数回あった（例：採択結果発表）
+- nikkieはPyCon JP 2018初参加。お祭りを楽しんだ
+- 2019〜 スタッフ参加「人手が足りていないようなので、**何か手伝えれば**」
 
 +++
 
@@ -65,46 +74,61 @@
 
 +++
 
-## 無くても大丈夫です
+## 無くてもスタッフはできます
 ## 何か手伝いたいという気持ちで十分
+
+今日のpycharity：PSFがピンチ、何かしたいと集まった
 
 +++
 
 ### 例えばこんなことをします
 
+- スタッフmtgについてブログ執筆
 - スポンサーやスピーカーとのやり取り
-- 当日の司会進行（Zoomミーティング）
+- 当日の司会進行（**Zoomミーティング**）
 
 +++
 
-### できる範囲で、楽しもう
+### 自分にあったやり方で楽しもう
 
-- ボランティア。何も強制されてはいない（pycharityの参加枠と同じ）
-- 十人十色のスタッフの道（カスタマイズして楽しんで）
+- お祭りを企画し、**裏で支える**という楽しみ方
+- 週何時間スタッフするかは**あなた次第**（何一つ強制ではない）
+- 十人十色のスタッフの道
 
 +++
 
 ### PyCon JP スタッフ（nikkie ver.）
 
-- PyCon JPを手伝いたい一方で、Pythonも書きたい
-- 怠惰な上にDRYは大嫌い→繰り返すタスクはPythonにやらせよう
+- PyCon JPを手伝いたい一方で、**Pythonも書きたい**
+- **怠惰**な上に**DRYは大嫌い**➡️繰り返すタスクはPythonにやらせよう
 
 +++
 
-### 例：繰り返すタスクはPythonに
+### 例：繰り返すタスクはPythonに 1/2
 
+プロポーザルについての質問をSlackにお知らせ（毎日Googleフォームを見に行きたくない😫）
+
+![](pycharity_Jull_pyconjp_staff/assets/images/notify_form_to_slack.png)
+
++++
+
+### 例：繰り返すタスクはPythonに 2/2
+
+自動で止まるSlackリマインダー（毎日繰り返すリマインダーを止める日を覚えていたくない😫）
+
+![](pycharity_Jull_pyconjp_staff/assets/images/custom_slack_reminder.png)
 
 ---
 
-### まとめ
+### まとめ：PyCon JP スタッフ活動の紹介
 
-- もうじきPyCon JPです
-- スタッフはなにか手伝いたいという気持ちで十分。できる範囲で
-- 私はスタッフ活動をPythonとやる形に落ち着きました
+- 年に1度のPython祭り、PyCon JPはもうすぐ（8/28, 29）
+- 楽しみ方の1つの形: **裏方としてお祭りを楽しむ**
+- 私はスタッフ活動を**Pythonと一緒に**進めて楽しんでいます
 
 +++
 
 ### ご清聴ありがとうございました
 
-スタッフ募集中（Pythonの知識不問。興味あれば歓迎）
+スタッフ募集中（**何か手伝ってみたい**という方、大歓迎）
 当日スタッフ募集予定
