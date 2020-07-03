@@ -8,14 +8,6 @@
 
 - ハンドルネーム「にっきー」 (@fa[twitter] [@ftnext](https://twitter.com/ftnext))
 - Python🐍歴2年半ほど（趣味➡️仕事）
-- 2019〜 PyCon JP スタッフ
-
-+++
-
-### お前、誰よ (About nikkie)
-
-- ハンドルネーム「にっきー」 (@fa[twitter] [@ftnext](https://twitter.com/ftnext))
-- Python🐍歴2年半ほど（趣味➡️仕事）
 - 2019〜 PyCon JP スタッフ 👈この話をします
 
 ---
@@ -41,7 +33,7 @@
 
 ### PyCon JPって、何よ （Do you know PyCon JP?）
 
-- **Py**thon **Con**ference: Pythonについての国際会議
+- *Py*thon *Con*ference: Pythonについての国際会議
 - 日本🇯🇵開催➡️PyCon JP
 - 年に1度の**お祭り**であり、Pythonの**知見を共有**する場
 
