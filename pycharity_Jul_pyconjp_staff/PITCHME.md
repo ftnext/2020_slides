@@ -121,5 +121,5 @@
 
 ### ご清聴ありがとうございました
 
-- スタッフ募集中（**何か手伝ってみたい**という方、大歓迎）
-- 当日スタッフ募集予定
+- [スタッフ募集中](https://pyconjp.blogspot.com/2019/11/2020-staff-application-form.html)（**何か手伝ってみたい**という方、大歓迎）
+- [当日スタッフ募集予定](https://pyconjp.blogspot.com/2020/06/2020-general-meeting-jun-2.html)
