@@ -1,6 +1,6 @@
 theme            : template
 
-theme-background : [ "#FFF" ]
+theme-background : [ "azure" ]
 theme-headline : [ "Ubuntu", "#1C1C1C", "none", "#1C1C1C", "100", "120", "15" ]
 theme-byline   : [ "Ubuntu", "#1C1C1C", "none", "#1C1C1C", "100", "110", "15" ]
 theme-text     : [ "Ubuntu", "#1C1C1C", "none", "#1C1C1C", "100", "100", "15" ]
