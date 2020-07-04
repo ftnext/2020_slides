@@ -16,8 +16,8 @@
 
 +++
 
-## どんな夏にしたいですか？
-## 🍉 🌻 ⛱️ 🍧 🌴
+## 皆さんの夏は？
+## 🌞 🍉 🌻 🏖️ 🍧 🌴 🎆
 
 ちなみに、nikkieは"登壇の夏"
 
@@ -99,7 +99,7 @@
 
 プロポーザルについての質問をSlackにお知らせ（毎日Googleフォームを見に行きたくない😫）
 
-![](pycharity_Jull_pyconjp_staff/assets/images/notify_form_to_slack.png)
+![](pycharity_Jul_pyconjp_staff/assets/images/notify_form_to_slack.png)
 
 +++
 
@@ -107,7 +107,7 @@
 
 自動で止まるSlackリマインダー（毎日繰り返すリマインダーを止める日を覚えていたくない😫）
 
-![](pycharity_Jull_pyconjp_staff/assets/images/custom_slack_reminder.png)
+![](pycharity_Jul_pyconjp_staff/assets/images/custom_slack_reminder.png)
 
 ---
 
@@ -121,5 +121,5 @@
 
 ### ご清聴ありがとうございました
 
-スタッフ募集中（**何か手伝ってみたい**という方、大歓迎）  
-当日スタッフ募集予定
+- [スタッフ募集中](https://pyconjp.blogspot.com/2019/11/2020-staff-application-form.html)（**何か手伝ってみたい**という方、大歓迎）
+- [当日スタッフ募集予定](https://pyconjp.blogspot.com/2020/06/2020-general-meeting-jun-2.html)
