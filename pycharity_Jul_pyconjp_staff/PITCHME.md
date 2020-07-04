@@ -99,7 +99,7 @@
 
 プロポーザルについての質問をSlackにお知らせ（毎日Googleフォームを見に行きたくない😫）
 
-![](pycharity_Jull_pyconjp_staff/assets/images/notify_form_to_slack.png)
+![](pycharity_Jul_pyconjp_staff/assets/images/notify_form_to_slack.png)
 
 +++
 
@@ -107,7 +107,7 @@
 
 自動で止まるSlackリマインダー（毎日繰り返すリマインダーを止める日を覚えていたくない😫）
 
-![](pycharity_Jull_pyconjp_staff/assets/images/custom_slack_reminder.png)
+![](pycharity_Jul_pyconjp_staff/assets/images/custom_slack_reminder.png)
 
 ---
 
