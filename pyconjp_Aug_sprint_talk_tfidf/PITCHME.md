@@ -49,7 +49,7 @@
 
 - nikkieは2020サイトに検索機能を追加できない（Vue, Nuxt未入門）
 - 仮説：タイトル以上の情報を伝えられれば少しは出会える？
-- タイトル以上の情報＝トークのキーワード
+- タイトル以上の情報＝トークの**キーワード**
 
 +++
 
@@ -73,8 +73,11 @@
 ### 初期実装
 
 - トークのテキストは日本語も英語もある→全トークで見たTFIDFにしたいので混ぜて扱う
-- 英語の結果（一部）：`I can't believe it's still here!: the, a, to, it, deprecated, function, ex`
-- 日本語の結果（一部）：`PythonでXBRL形式の財務情報を扱おう: xbrl, arelle, の, edinet, を, 情報, は`
+
+言語 | タイトル | キーワード
+----- | ----- | ----- 
+英語 | I can't believe it's still here! | *the*, *a*, *to*, *it*, **deprecated**, function, ex
+日本語 | PythonでXBRL形式の財務情報を扱おう | **xbrl**, arelle, *の+, edinet, *を*, 情報, *は*
 
 Pythonはどのトークにもあるのでキーワードにならない  
 deprecatedやxbrlなどそのトークで扱う語がキーワードになる
@@ -85,7 +88,10 @@ deprecatedやxbrlなどそのトークで扱う語がキーワードになる
 
 - 形態素解析した後、助詞（例：を）・助動詞・記号を除く
 - 英語のaやitなどを除く（`TfidfVectorizer`に`stop_word`指定）
-- 結果（一部）`PythonでXBRL形式の財務情報を扱おう: xbrl, arelle, edinet, する, 情報, データ, 有価証券報告書`
+
+言語 | タイトル | キーワード
+----- | ----- | ----- 
+日本語 | PythonでXBRL形式の財務情報を扱おう | xbrl, arelle, edinet, *する*, 情報, データ, 有価証券報告書
 
 +++
 
@@ -94,6 +100,7 @@ deprecatedやxbrlなどそのトークで扱う語がキーワードになる
 - 「する」などよく出る語対策：`TfidfVectorizer`に`max_df`指定
 - マークダウン中の箇条書きやリンクURLの削除
 - 数字を0にまとめる
+- （追加）：補助動詞を除く（MeCabでは「勉強する」が「勉強」「する」に分かれ、「する」は補助動詞と品詞タグ付けされると教わった）
 
 +++
 
