@@ -1,6 +1,6 @@
 ## 野良プロジェクト：トークと出会えるようにしたい！
 #### TFIDFを使ったトーク紹介ブログ
-#### PyCon JP Sprinnt成果発表会（2020/08/30）nikkie
+#### PyCon JP Sprint成果発表会（2020/08/30）nikkie
 
 ---
 
@@ -57,7 +57,7 @@
 
 - トークのテキストに含まれる各語について、TFIDFという値を算出
 - TFIDFが高い語はキーワードと考えられる
-- TFIDFが高い語＝そのトークのテキストに頻繁に登場し、他のプロポーザルにはあまり登場しない
+- TFIDFが高い語＝そのトークのテキストに頻繁に登場し、他のトークにはあまり登場しない
 
 ---
 
@@ -73,11 +73,8 @@
 ### 初期実装
 
 - トークのテキストは日本語も英語もある→全トークで見たTFIDFにしたいので混ぜて扱う
-
-```
-I can't believe it's still here!: the, a, to, it, deprecated, function, ex
-PythonでXBRL形式の財務情報を扱おう: xbrl, arelle, の, edinet, を, 情報, は
-```
+- 英語の結果（一部）：`I can't believe it's still here!: the, a, to, it, deprecated, function, ex`
+- 日本語の結果（一部）：`PythonでXBRL形式の財務情報を扱おう: xbrl, arelle, の, edinet, を, 情報, は`
 
 Pythonはどのトークにもあるのでキーワードにならない  
 deprecatedやxbrlなどそのトークで扱う語がキーワードになる
@@ -88,10 +85,7 @@ deprecatedやxbrlなどそのトークで扱う語がキーワードになる
 
 - 形態素解析した後、助詞（例：を）・助動詞・記号を除く
 - 英語のaやitなどを除く（`TfidfVectorizer`に`stop_word`指定）
-
-```
-PythonでXBRL形式の財務情報を扱おう: xbrl, arelle, edinet, する, 情報, データ, 有価証券報告書
-```
+- 結果（一部）`PythonでXBRL形式の財務情報を扱おう: xbrl, arelle, edinet, する, 情報, データ, 有価証券報告書`
 
 +++
 
