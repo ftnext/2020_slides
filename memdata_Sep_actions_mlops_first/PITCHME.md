@@ -58,7 +58,7 @@
 
 ### 簡単に訓練が始まる
 
-- MLOpsと呼ばれる分野（Machine Learning Operations）
+- MLOpsと呼ばれる分野（Machine Learning Operations）※(追記)とても広大（[こちら](https://cloud.google.com/solutions/machine-learning/mlops-continuous-delivery-and-automation-pipelines-in-machine-learning)の図1）
 - その中の**実験管理**の領域
 - 様々なツールがあり、「自動で訓練」も実現されている
 
@@ -72,6 +72,8 @@
 +++
 
 # Demo
+
+![プルリクエストにコマンドに応じたラベルが付いた例](memdata_Sep_actions_mlops_first/assets/images/github_actions_attached_label.png)
 
 +++
 
@@ -164,3 +166,11 @@
 
 - 実装の参考（PyCon JP Sprintでの[成果発表スライド](https://gitpitch.com/ftnext/2020_slides/master?p=pyconjp_Aug_sprint_talk_tfidf)）
 - ここで紹介したGitHub Actionsの設定について、[拙ブログの記事](https://nikkie-ftnext.hatenablog.com/entry/github-actions-mlops-first-step)
+
+---
+
+### 当日質疑より：GitHub Actions
+
+- CIの例：プルリクエストが作られたら、そのコードに対してテストコードを実行する
+- これまではCircle CIなど、GitHubの外部のCIツールが使われてきた
+- GitHub ActionsでCIが**GitHub内部でも可能**になった（かつ、リポジトリのイベントをトリガーにできる）
