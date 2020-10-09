@@ -3,6 +3,7 @@ GitPitchで作成したスライドの公開用リポジトリです。
 
 # スライド一覧
 
+- [Stay home, but connect global Python users!](https://gitpitch.com/ftnext/2020_slides/master?p=pyconhiro_Oct_connect_global#/1) @[PyCon mini Hiroshima 2020 (2020/10)](https://hiroshima.pycon.jp/2020/)
 - [GitHub Actionsを使ったMLOpsの一歩目 TFIDFによるキーワード抽出スクリプトを例に](https://gitpitch.com/ftnext/2020_slides/master?p=memdata_Sep_actions_mlops_first) @[データ分析・機械学習 LT会 Members.data #4 (2020/09)](https://dataadventure.connpass.com/event/185016/)
 - [野良プロジェクト：トークと出会えるようにしたい！ TFIDFを使ったトーク紹介ブログ](https://gitpitch.com/ftnext/2020_slides/master?p=pyconjp_Aug_sprint_talk_tfidf) @[PyCon JP 2020 Sprint (2020/08)](https://pyconjp.connpass.com/event/183507/)
 - [カンファレンススタッフとしてコードを書いて広げるエンジニアリング・ライフ](https://docs.google.com/presentation/d/1ATNL1J5OtCW3ay3rs8kynULl0cJ6bKJje654XvI8BuM/edit?usp=sharing)(Google Slide) @[July Tech Festa 2020 (2020/07)](https://techfesta.connpass.com/event/175611/)
