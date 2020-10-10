@@ -20,7 +20,7 @@
 
 ### LT: Stay home, but connect global Python users!
 
-- Stay home（🙅‍♂️ 渡航）だけど、世界のPython使いとつながろう！
+- Stay home（渡航😭）だけど、世界のPython使いとつながろう！
 - 「英語」の不安を乗り越えて、**海外PyConで登壇して学んだこと**を共有します
 
 +++
@@ -114,7 +114,7 @@
 ### 英語でオンライン登壇して得たもの🎤
 
 - チャットツールでのフィードバック（👏👏👏, Great talk, thanks, etc.）
-- 質疑→数人だけだったとしても**届いた！**という達成感
+- 質疑数件。その方たちには**届いた！**という達成感
 
 +++
 
@@ -152,7 +152,7 @@
 
 ### まとめ🌯：Stay home, but connect global Python users!
 
-- **読み重視**の作戦📖で、英語を話す不安は突破できる
+- **読み重視**の作戦📖で、英語で登壇する不安は突破できる
 - 好きな技術への想いは、自分が**熱**🔥を失わないうちに、伝えたほうがいい
 
 +++
@@ -172,4 +172,4 @@
 
 ## Stay home, but join global conferences!
 
-TODO：補足ブログリンク
+[補足ブログ](https://nikkie-ftnext.hatenablog.com/entry/stay-home-connect-global-pyconhiro2020)
