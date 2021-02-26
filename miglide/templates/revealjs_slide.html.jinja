@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="../reveal.js/dist/reveal.css"
+    />
+    <link
+      rel="stylesheet"
+      href="../reveal.js/dist/theme/sky.css"
+      type="text/css"
+    />
+    <link rel="stylesheet" href="../_static/css/default.css" type="text/css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="../Font-Awesome/css/all.min.css"
+    />
+  </head>
+
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        <section
+          data-markdown
+          data-separator="^\n---(\?.*)?\n$"
+          data-separator-vertical="^\n\+\+\+\n(\?.*)?$"
+        >
+          <textarea data-template>
+{{ slide_contents }}
+    </textarea
+          >
+        </section>
+      </div>
+    </div>
+    <script src="../reveal.js/dist/reveal.js"></script>
+    <script src="../reveal.js/plugin/markdown/markdown.js"></script>
+    <script>
+      Reveal.initialize({
+        plugins: [RevealMarkdown],
+        progress: true,
+        history: true,
+        margin: 0.0,
+        slideNumber: "c/t",
+        transition: "none",
+      });
+    </script>
+  </body>
+</html>
