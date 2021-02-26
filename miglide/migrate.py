@@ -40,7 +40,9 @@ def rewrite_contents(contents, slide_name):
 
 def migrate_slide(slide_name):
     source = Path(slide_name) / "PITCHME.md"
-    destination = Path("docs") / slide_name / "slide.html"
+    destination_directory = Path("docs") / slide_name
+    destination = destination_directory / "slide.html"
+    destination_directory.mkdir(parents=True, exist_ok=True)
 
     source_contents = source.read_text()
     slide_contents = rewrite_contents(source_contents.rstrip(), slide_name)
