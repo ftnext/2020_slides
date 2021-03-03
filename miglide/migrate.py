@@ -13,7 +13,7 @@ def move_images(slide_name):
     images_root = Path(slide_name) / "assets" / "images"
     for image_path in images_root.glob("*.png"):
         destination_path = destination_root / image_path.name
-        shutil.copyfile(image_path, destination_path)
+        shutil.move(image_path, destination_path)
 
 
 def load_slide_template():
