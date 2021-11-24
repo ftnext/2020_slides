@@ -1,0 +1,43 @@
+.reveal h1,
+.reveal h2,
+.reveal h3,
+.reveal h4,
+.reveal h5,
+.reveal h6 {
+  text-transform: none;
+  word-wrap: break-word;
+  font-family: 'Source Sans Pro', Helvetica, sans-serif;
+  letter-spacing: 0.00em;
+}
+
+/* same padding as GitPitch (Reveal.js 3.8.x) */
+.reveal ol,
+.reveal ul {
+  padding: 0;
+}
+
+/* Custom classes for images */
+.thirty-percent-img {
+  width: 30%;
+  height: 30%;
+}
+
+.fifty-percent-img {
+  width: 50%;
+  height: 50%;
+}
+
+.sixty-percent-img {
+  width: 60%;
+  height: 60%;
+}
+
+.seventy-percent-img {
+  width: 70%;
+  height: 70%;
+}
+
+.eighty-percent-img {
+  width: 80%;
+  height: 80%;
+}
